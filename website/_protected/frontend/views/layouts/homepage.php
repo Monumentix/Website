@@ -84,17 +84,9 @@ AppAsset::register($this);
             NavBar::end();
         ?>
 
-
-
-
-
-        <div id="breadcrumbwrapper" class="container-fluid">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        </div>
         <div class="container-fluid no-padding">
+        <?= Alert::widget() ?>
+
         <?= $content ?>
         </div>
     </div>
