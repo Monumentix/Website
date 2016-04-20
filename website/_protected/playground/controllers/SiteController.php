@@ -77,7 +77,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) 
+        if (!Yii::$app->user->isGuest)
         {
             return $this->goHome();
         }
@@ -89,12 +89,12 @@ class SiteController extends Controller
         $lwe ? $model = new LoginForm(['scenario' => 'lwe']) : $model = new LoginForm() ;
 
         // everything went fine, log in the user
-        if ($model->load(Yii::$app->request->post()) && $model->login()) 
+        if ($model->load(Yii::$app->request->post()) && $model->login())
         {
             return $this->goBack();
-        } 
+        }
         // errors will be displayed
-        else 
+        else
         {
             return $this->render('login', [
                 'model' => $model,

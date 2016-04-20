@@ -33,11 +33,13 @@ return [
         'path' => 'dev',
         'setWritable' => [
             '_protected/backend/runtime',
+            '_protected/playground/runtime',
             '_protected/frontend/runtime',
             '_protected/frontend/runtime/mail',
             '/assets',
             '/uploads',
             '/backend/assets'
+            '/playground/assets'
         ],
         'setExecutable' => [
             '_protected/yii',
@@ -52,9 +54,11 @@ return [
         'path' => 'prod',
         'setWritable' => [
             '_protected/backend/runtime',
+            '_protected/playground/runtime',
             '_protected/frontend/runtime',
             '/assets',
             '/backend/assets'
+            '/playground/assets'
         ],
         'setExecutable' => [
             '_protected/yii',

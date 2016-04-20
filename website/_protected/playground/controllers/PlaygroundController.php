@@ -8,10 +8,10 @@ use Yii;
 
 /**
  * playgroundController extends Controller and implements the behaviors() method
- * where you can specify the access control ( AC filter + RBAC) for 
+ * where you can specify the access control ( AC filter + RBAC) for
  * your controllers and their actions.
  */
-class playgroundController extends Controller
+class PlaygroundController extends Controller
 {
     /**
      * Returns a list of behaviors that this component should behave as.

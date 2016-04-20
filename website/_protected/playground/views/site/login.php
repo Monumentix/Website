@@ -14,13 +14,13 @@ $this->title = Yii::t('app', 'Login');
 
     <div class="col-lg-5 well bs-component">
 
-        <p><?= Yii::t('app', 'Please fill out the following fields to login:') ?></p>
+        <p><?= Yii::t('app', 'Please fill out the following fields to login to the application:') ?></p>
 
         <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
         <?php //-- use email or username field depending on model scenario --// ?>
         <?php if ($model->scenario === 'lwe'): ?>
-            <?= $form->field($model, 'email') ?>        
+            <?= $form->field($model, 'email') ?>
         <?php else: ?>
             <?= $form->field($model, 'username') ?>
         <?php endif ?>
@@ -35,5 +35,5 @@ $this->title = Yii::t('app', 'Login');
         <?php ActiveForm::end(); ?>
 
     </div>
-  
+
 </div>
