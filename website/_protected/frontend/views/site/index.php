@@ -142,6 +142,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                   <div class="col-xs-4 col-sm-4">
                     <div class="row">
                       <div class="col-sm-10 col-sm-offset-2">
+
                         <img src="<?=$this->theme->baseUrl?>/images/yii-logo.png" class="center-block img img-responsive ">
                       </div>
                     </div>
@@ -181,7 +182,7 @@ $this->title = Yii::t('app', Yii::$app->name);
 
                   <div class="row">
                     <div class="col-sm-3">
-                      <img src="<?=$this->theme->baseUrl?>/images/aws_logo_web.png" class="center-block img img-responsive ">
+                      <img src="<?=$this->theme->baseUrl?>/images/Magento-logo.png" class="center-block img img-responsive ">
                     </div>
                     <div class="col-sm-8">
                       <h3>Open Source Ecommerce Package</h3>
@@ -193,7 +194,7 @@ $this->title = Yii::t('app', Yii::$app->name);
 
                   <div class="row">
                     <div class="col-sm-3">
-                      <img src="<?=$this->theme->baseUrl?>/images/aws_logo_web.png" class="center-block img img-responsive ">
+                      <img src="<?=$this->theme->baseUrl?>/images/yii-logo.png" class="center-block img img-responsive ">
                     </div>
                     <div class="col-sm-8">
                       <h3>Product Management Application</h3>
@@ -237,34 +238,88 @@ $this->title = Yii::t('app', Yii::$app->name);
         <div id="" class="row">
           <div class="col-lg-12">
             <h3 class="text-center">Blog Posts : <small class="lead">Project Updates and Information</small></h3>
-            <div id="" class="row center-block">
+            <div id="blogPostsRow" class="row center-block">
 
               <div class="col-lg-4">
-                <div class="well postPreview">
+                <div class="postPreview">
                   <h4>Title 1</h4>
                   <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
-                  <a class="text-right btn btn-lg btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                  <div class="text-right">
+                    <a class="text-right btn btn-xs btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                  </div>
+                </div>
+                <div class="postDetails text-center">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      01/01/2016
+                    </div>
+                    <div class="col-xs-6">
+                      Brian Ridsdale
+                    </div>
+                    <div class="col-xs-12">
+                    AWS, PHP, Cloud, Networking, Magento
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="col-lg-4">
-                <div class="well postPreview">
+                <div class="postPreview">
                   <h4>Title 1</h4>
                   <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
-                  <a class="text-right btn btn-lg btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                  <div class="text-right">
+                    <a class="text-right btn btn-xs btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                  </div>
+                </div>
+                <div class="postDetails text-center">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      01/01/2016
+                    </div>
+                    <div class="col-xs-6">
+                      Brian Ridsdale
+                    </div>
+                    <div class="col-xs-12">
+                    AWS, PHP, Cloud, Networking, Magento
+                    </div>
+                  </div>
                 </div>
               </div>
+
 
               <div class="col-lg-4">
-                <div class="well postPreview">
+                <div class="postPreview">
                   <h4>Title 1</h4>
                   <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
-                  <a class="text-right btn btn-lg btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                  <div class="text-right">
+                    <a class="text-right btn btn-xs btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                  </div>
+                </div>
+                <div class="postDetails text-center">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      01/01/2016
+                    </div>
+                    <div class="col-xs-6">
+                      Brian Ridsdale
+                    </div>
+                    <div class="col-xs-12">
+                    AWS, PHP, Cloud, Networking, Magento
+                    </div>
+                  </div>
                 </div>
               </div>
 
+            </div> <!--End of row-->
 
-            </div>
+            <div class="row">
+
+              <h5 class="text-center">
+              Read more about our projects and technologies were are working with or have worked with.
+              <a class="text-right btn btn btn-primary shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Our Blog</a>
+            </h5>
+            </div> <!--End of row-->
+
           </div>
         </div>
       </div>
@@ -308,7 +363,7 @@ $this->title = Yii::t('app', Yii::$app->name);
         <Br>
           <div class="contact-info">
               <p>Brian Ridsdale</p>
-                <p>15 Colonial Terrace Suite</p>
+                <p>15 Colonial Terrace</p>
                 <p>Pompton Plains, NJ 07444</p>
                 <p>973-671-8326</p>
             </div>

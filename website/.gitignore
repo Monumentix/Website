@@ -28,6 +28,5 @@ composer.phar
 phpunit.phar
 # local phpunit config
 /phpunit.xml
-/_protected/frontend/runtime/mail
-/_protected/frontend/runtime/debug
-/_protected/frontend/runtime/logs
+
+/_protected/frontend/runtime

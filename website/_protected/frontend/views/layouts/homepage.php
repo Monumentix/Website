@@ -41,24 +41,29 @@ AppAsset::register($this);
 
             // everyone can see Home page
             $menuItems[] = ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']];
+            $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/#aboutme']];
+            $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/#contactme']];
+            $menuItems[] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/article/index']];
 
-
-
+            /*
 
             // we do not need to display Article/index, About and Contact pages to editor+ roles
             if (!Yii::$app->user->can('editor'))
             {
-                $menuItems[] = ['label' => Yii::t('app', 'Articles'), 'url' => ['/article/index']];
-                $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/site/about']];
-                $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/site/contact']];
+                $menuItems[] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/article/index']];
+                $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/#aboutme']];
+                $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/#contactme']];
             }
+
 
             // display Article admin page to editor+ roles
             if (Yii::$app->user->can('editor'))
             {
                 $menuItems[] = ['label' => Yii::t('app', 'Articles'), 'url' => ['/article/admin']];
             }
+            */
 
+            /*
             // display Signup and Login pages to guests of the site
             if (Yii::$app->user->isGuest)
             {
@@ -74,6 +79,8 @@ AppAsset::register($this);
                     'linkOptions' => ['data-method' => 'post']
                 ];
             }
+            */
+
 
 
 
@@ -96,17 +103,38 @@ AppAsset::register($this);
 
         <!-- LOWER third -->
         <div class="row">
-          <div class="col-lg-3">
-            <h4>Heading</h4>
+          <div class="col-lg-2 col-sm-6">
+            <h4>Quick Links:</h4>
+            <ul>
+              <li> <a href="">About Me</a></li>
+              <li> <a href="">Contact Me</a></li>
+              <li> <a href="">Project Spotlight</a></li>
+              <li> <a href="">Blog</a></li>
+            </ul>
           </div>
-          <div class="col-lg-6">
-            <h4>Heading</h4>
+          <div class="col-lg-2 col-sm-6">
+            <h4>Demo My Work</h4>
+            <p>Interact with a demo application.</p>
+            <a class="btn btn-sm btn-success" href="#"><span class="glyphicon glyphicon-warning"></span> Demo & Samples</a>
           </div>
-          <div class="col-lg-3">
-            <h4>Heading</h4>
+          <div class="col-lg-6 col-sm-6">
+            <h4>Latest Blog Post:</h4>
+            <p><strong>Our Blog Post Title Goes Here </strong> - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
+          
+          </div>
+          <div class="col-lg-2 col-sm-6">
+            <h4>Get In Touch:</h4>
+            <address>
+              <strong>Monumentix / Brian Ridsdale </strong><br>
+              15 Colonial Terrace <br>
+              Pompton Plains, NJ 07444<br>
+              <abb title="Phone">P:</abbr>&nbsp;(973)671-8326
+            </address>
           </div>
         </div>
         <!-- LOWER third -->
+
+        <hr>
 
         <!-- copywright -->
         <div class="row">

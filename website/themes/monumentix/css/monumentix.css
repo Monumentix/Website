@@ -91,13 +91,28 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   background-color:#bdccd7;
   border-bottom:4px solid #15344e;
 }
+#blogPostsRow{
+  margin-bottom:20px;
+}
 
 #blogposts .postPreview{
-  background-color:#2A4F6A;
+  padding:10px;
+  background-color:#356385;
   font-size:120%;
   text-shadow:2px 2px 1px #333;
   color:#e3e3e3;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px
 }
+
+#blogposts .postDetails{
+  padding:4px;
+  background-color:#e6e8e9;
+  border:2px solid #356385;
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px
+}
+
 
 #contactme{
   background-color:#356385;
@@ -141,9 +156,25 @@ body{font-family: 'Roboto Condensed', sans-serif;}
 
 
 .footer{
+    text-shadow:2px 2px 1px #333;
+    color:#eee;
     background-color: #223F55;
     padding: 20px 0 20px 0 ;
 }
+
+.footer a, .footer a:active{
+  color:#99bcdb;
+}
+.footer a:hover{
+  color:#337ab7;
+}
+
+.footer a.btn, .footer a.btn:active, .footer a.btn:hover{
+  color:#eee;
+}
+
+.footer hr{margin:10px 0px; border-color:#eee}
+
 
 h1, h2, h3, h4, h5 { font-family: 'Fjalla One', sans-serif; }
 
