@@ -7,7 +7,7 @@ use yii\db\ActiveRecord;
 use Yii;
 
 /**
- * This is the model class for table "{{%article}}".
+ * This is the model class for table "{{%blog}}".
  *
  * @property integer $id
  * @property integer $user_id
@@ -15,20 +15,15 @@ use Yii;
  * @property string $summary
  * @property string $content
  * @property integer $status
- * @property integer $category
  * @property integer $created_at
  * @property integer $updated_at
  *
  * @property User $user
  */
-class Article extends ActiveRecord
+class Blog extends ActiveRecord
 {
     const STATUS_DRAFT = 1;
     const STATUS_PUBLISHED = 2;
-
-    const CATEGORY_ECONOMY = 1;
-    const CATEGORY_SOCIETY = 2;
-    const CATEGORY_SPORT = 3;
 
     /**
      * Declares the name of the database table associated with this AR class.
@@ -37,7 +32,7 @@ class Article extends ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%article}}';
+        return '{{%blog}}';
     }
 
     /**
@@ -49,7 +44,7 @@ class Article extends ActiveRecord
     {
         return [
             [['user_id', 'title', 'summary', 'content', 'status'], 'required'],
-            [['user_id', 'status', 'category'], 'integer'],
+            [['user_id', 'status'], 'integer'],
             [['summary', 'content'], 'string'],
             [['title'], 'string', 'max' => 255]
         ];
@@ -81,7 +76,6 @@ class Article extends ActiveRecord
             'summary' => Yii::t('app', 'Summary'),
             'content' => Yii::t('app', 'Content'),
             'status' => Yii::t('app', 'Status'),
-            'category' => Yii::t('app', 'Category'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
         ];
@@ -150,6 +144,11 @@ class Article extends ActiveRecord
 
         return $statusArray;
     }
+
+
+
+
+
 
     /**
      * Returns the article category in nice format.
