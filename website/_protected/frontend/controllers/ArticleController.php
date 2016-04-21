@@ -42,7 +42,7 @@ class ArticleController extends FrontendController
 
     /**
      * Displays a single Article model.
-     * 
+     *
      * @param  integer $id
      * @return mixed
      */
@@ -56,7 +56,7 @@ class ArticleController extends FrontendController
     /**
      * Creates a new Article model.
      * If creation is successful, the browser will be redirected to the 'view' page.
-     * 
+     *
      * @return mixed
      */
     public function actionCreate()
@@ -65,11 +65,11 @@ class ArticleController extends FrontendController
 
         $model->user_id = Yii::$app->user->id;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) 
+        if ($model->load(Yii::$app->request->post()) && $model->save())
         {
             return $this->redirect(['view', 'id' => $model->id]);
-        } 
-        else 
+        }
+        else
         {
             return $this->render('create', [
                 'model' => $model,
@@ -80,7 +80,7 @@ class ArticleController extends FrontendController
     /**
      * Updates an existing Article model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * 
+     *
      * @param  integer $id
      * @return mixed
      *
@@ -90,13 +90,13 @@ class ArticleController extends FrontendController
     {
         $model = $this->findModel($id);
 
-        if (Yii::$app->user->can('updateArticle', ['model' => $model])) 
+        if (Yii::$app->user->can('updateArticle', ['model' => $model]))
         {
-            if ($model->load(Yii::$app->request->post()) && $model->save()) 
+            if ($model->load(Yii::$app->request->post()) && $model->save())
             {
                 return $this->redirect(['view', 'id' => $model->id]);
-            } 
-            else 
+            }
+            else
             {
                 return $this->render('update', [
                     'model' => $model,
@@ -106,13 +106,13 @@ class ArticleController extends FrontendController
         else
         {
             throw new MethodNotAllowedHttpException(Yii::t('app', 'You are not allowed to access this page.'));
-        } 
+        }
     }
 
     /**
      * Deletes an existing Article model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * 
+     *
      * @param  integer $id
      * @return mixed
      *
@@ -127,7 +127,7 @@ class ArticleController extends FrontendController
 
     /**
      * Manage Articles.
-     * 
+     *
      * @return mixed
      */
     public function actionAdmin()
@@ -140,7 +140,7 @@ class ArticleController extends FrontendController
 
         /**
          * Only admin+ roles can see everything.
-         * Editors will be able to see only published articles and their own drafts @see: search(). 
+         * Editors will be able to see only published articles and their own drafts @see: search().
          * @var boolean
          */
         $published = (Yii::$app->user->can('admin')) ? false : true ;
@@ -157,19 +157,19 @@ class ArticleController extends FrontendController
     /**
      * Finds the Article model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * 
+     *
      * @param integer  $id
      * @return Article The loaded model.
-     * 
+     *
      * @throws NotFoundHttpException if the model cannot be found.
      */
     protected function findModel($id)
     {
-        if (($model = Article::findOne($id)) !== null) 
+        if (($model = Article::findOne($id)) !== null)
         {
             return $model;
-        } 
-        else 
+        }
+        else
         {
             throw new NotFoundHttpException('The requested page does not exist.');
         }

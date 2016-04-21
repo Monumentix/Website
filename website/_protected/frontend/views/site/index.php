@@ -1,4 +1,8 @@
 <?php
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
+
 
 /* @var $this yii\web\View */
 $this->title = Yii::t('app', Yii::$app->name);
@@ -17,9 +21,9 @@ $this->title = Yii::t('app', Yii::$app->name);
           |
           <strong>&lt;&gt;</strong> Creative Coder  <strong>&lt;/&gt;</strong>  </p>
         <p>
-          <a class="btn btn-lg btn-primary shadow" href="#"><span class="glyphicon glyphicon-user"></span> Know me Better</a>
+          <a class="btn btn-lg btn-primary shadow" href="#aboutme"><span class="glyphicon glyphicon-user"></span> Know me Better</a>
           &nbsp; &nbsp;
-          <a class="btn btn-lg btn-success shadow" href="#"><span class="glyphicon glyphicon-flash"></span> Hire Me</a>
+          <a class="btn btn-lg btn-success shadow" href="#contactme"><span class="glyphicon glyphicon-flash"></span> Hire Me</a>
         </p>
 
     </div>
@@ -57,42 +61,37 @@ $this->title = Yii::t('app', Yii::$app->name);
         <div id="" class="row">
             <div class="col-lg-12">
                 <h3 class="text-center">What I do</h3>
-                <p class="text-center"><strong>Helping you work smarter, not harder</strong></p>
+                <p class="text-center">While this quote doesnt directly mention all the layers in many of the current cloud based technology stacks, the gist is accurate.<p>
+                <blockquote class="blockquote">
+                  <p>The term full-stack means developers who are comfortable working with both back-end and front-end technologies.</p>
+                  <p>To be more specific, it means that the developer can work with databases, PHP, HTML, CSS, JavaScript and everything in between, also, venturing as far as converting Photoshop designs to front-end code.</p>
+                  <p>A full-stack developer doesn’t need to master all of the areas and technologies he needs to work it, because that just makes it nearly impossible, he just needs to be comfortable working with those technologies, and that’s a lot too. </p>
+                  <footer>George Fekete - <cite title="Being A Full Stack Developer"><a href="http://www.sitepoint.com/full-stack-developer/">Being a Full Stack Developer</a></cite></footer>
+                </blockquote>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur.</p>
+
             </div>
             <hr>
-            <div class="col-sm-3">
+            <div class="col-sm-6">
               <img src="">
-              <h3>Some Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+              <h3>Server / Networking / Hosting Enviroment</h3>
+              <p>Wanna launch a website?  No problem. Wait it needs auto scaling frontend servers seperated from your backend application servers.  No problem.  More you say, a seperate database cluster and reddis caching as well.
+                And you need notification of all this stuff sent to your phone. Sure i can do that.</p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6">
               <img src="">
-              <h3>Some Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+              <h3>Data Modeling and Business Logic</h3>
+              <p>If you dont measure it, you cant manage it.  With so much available data in our applications and outside systems it can get frusturating keeping track of it all.  I can help you manage all that data through implementation of buisness logic and rules alongside normalized relational data models, viewable through queryable web forms and reports. </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6">
               <img src="">
-              <h3>Some Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+              <h3>User Interface / User Experience</h3>
+              <p>From readable layouts, to meaningful error messages, to minamizing button clicks and application steps, i strive to ensure the final product always remains as easy as it can be for the application user. </p>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-6">
               <img src="">
-              <h3>Some Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+              <h3>Oh yeah I code too</h3>
+              <p>While i write code, just as big a part is reading code.  Understanding external API's and MVC frameworks along with the affect they have on core business logic and its data has also become critical in our digital world. </p>
             </div>
         </div>
 
@@ -160,12 +159,12 @@ $this->title = Yii::t('app', Yii::$app->name);
 
 
 
-  <div id="thingsivedone" class="container-fluid ">
+  <div id="spotlight" class="container-fluid ">
     <div class="container">
       <div id="" class="row">
           <div class="col-lg-12">
-              <h3 class="text-center">Latest Project : <small class="lead">Scalable Cloud-Based E-Commerce Solution</small></h3>
-              <div class="row">
+              <h3 class="text-center">Spotlight Project : <small class="lead">Scalable Cloud-Based E-Commerce Solution</small></h3>
+              <div class="row spotlightwrapper">
                 <div class="col-sm-6">
 
                   <div class="row">
@@ -174,7 +173,9 @@ $this->title = Yii::t('app', Yii::$app->name);
                     </div>
                     <div class="col-sm-8">
                       <h3>Cloud Based Scalable Infastructre</h3>
-                      <p>A scalable and cloud based option centered around Amazons AWS infastrucre was choosen in part to cost, as well as to the range of services that integrated well with our choosen ecommerce package.  The largest upside has been the ability to use GIT and Cloud Formation templates to deploy/manage our network stack from source code version controlled templates. </p>
+                      <p>A scalable and cloud based option centered around Amazons AWS infastrucre was choosen in part to cost, as well as to the range of services that integrated well with our choosen ecommerce package.  The largest upside has been the ability to use GIT and Cloud Formation templates to deploy/manage our network stack from source code version controlled templates.
+                        <a class="pull-right" href="#">...learn more</a>
+                      </p>
                     </div>
                   </div>
 
@@ -183,8 +184,10 @@ $this->title = Yii::t('app', Yii::$app->name);
                       <img src="<?=$this->theme->baseUrl?>/images/aws_logo_web.png" class="center-block img img-responsive ">
                     </div>
                     <div class="col-sm-8">
-                      <h3>Ecommerce Package</h3>
-                      <p>When it came time to choose an ecommerce solution while cumbersome and bloated at times, magento does a good job at what it does.  That is provide an open source ecommerce solution with a large supporting community of developers and modules to enhacen and extend the platform. </p>
+                      <h3>Open Source Ecommerce Package</h3>
+                      <p>When it came time to choose an ecommerce solution while cumbersome and bloated at times, magento does a good job at what it does.  That is provide an open source ecommerce solution with a large supporting community of developers and modules to enhacen and extend the platform.
+                        <a class="pull-right" href="#">...learn more</a>
+                      </p>
                     </div>
                   </div>
 
@@ -193,8 +196,10 @@ $this->title = Yii::t('app', Yii::$app->name);
                       <img src="<?=$this->theme->baseUrl?>/images/aws_logo_web.png" class="center-block img img-responsive ">
                     </div>
                     <div class="col-sm-8">
-                      <h3>Supporting Application</h3>
-                      <p>Custom Web Based Buisness Application to  streamline and automate day to day processes that were not feasible or suitable to existing sub-systems.  Initially this Application started life as an data entry for inventory, as well as inventory tracking applcation, but quickly expanded to fill many other roles.</p>
+                      <h3>Product Management Application</h3>
+                      <p>Custom Web Based Buisness Application to  streamline and automate day to day processes that were not feasible or suitable to existing sub-systems.  Initially this Application started life as an data entry for inventory, as well as inventory tracking applcation, but quickly expanded to fill many other roles.
+                        <a class="pull-right" href="#">...learn more</a>
+                      </p>
                     </div>
                   </div>
 
@@ -204,6 +209,8 @@ $this->title = Yii::t('app', Yii::$app->name);
                   <img id="searchlightcomics-screenshot" src="<?=$this->theme->baseUrl?>/images/searchlightcomics-screenshot-with-monitor.png" class="center-block img img-responsive ">
                 </div>
               </div>
+
+              <br>
 
               <div class="row">
                 <div class="col-sm-4 text-center">
@@ -221,6 +228,100 @@ $this->title = Yii::t('app', Yii::$app->name);
       </div>
     </div>
   </div>
+
+
+
+
+    <div id="blogposts" class="container-fluid ">
+      <div class="container">
+        <div id="" class="row">
+          <div class="col-lg-12">
+            <h3 class="text-center">Blog Posts : <small class="lead">Project Updates and Information</small></h3>
+            <div id="" class="row center-block">
+
+              <div class="col-lg-4">
+                <div class="well postPreview">
+                  <h4>Title 1</h4>
+                  <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                  <a class="text-right btn btn-lg btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="well postPreview">
+                  <h4>Title 1</h4>
+                  <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                  <a class="text-right btn btn-lg btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="well postPreview">
+                  <h4>Title 1</h4>
+                  <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
+                  <a class="text-right btn btn-lg btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  <div id="contactme" class="container-fluid ">
+    <div class="container">
+      <div id="" class="row">
+        <h3 class="text-center">Contact Me</h3>
+        <div class="col-lg-8">
+          <div id="" class="row bs-component well">
+                <p>
+                    <?= Yii::t('app', 'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'); ?>
+                </p>
+
+                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+
+                    <?= $form->field($model, 'name') ?>
+                    <?= $form->field($model, 'email') ?>
+                    <?= $form->field($model, 'subject') ?>
+                    <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
+                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                        'template' => '<div class="row"><div class="col-lg-4">{image}</div><div class="col-lg-6">{input}</div></div>',
+                    ]) ?>
+
+                    <div class="form-group">
+                        <?= Html::submitButton(Yii::t('app', 'Submit'), ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                    </div>
+
+                <?php ActiveForm::end(); ?>
+          </div>
+        </div>
+
+        <div class="col-lg-4 text-center ">
+        <img src="<?=$this->theme->baseUrl?>/images/coder.jpg" class="contact-image img-circle img-coder-logo-large img-responsive hidden-xs hidden-sm center-block" alt="">
+        <Br>
+          <div class="contact-info">
+              <p>Brian Ridsdale</p>
+                <p>15 Colonial Terrace Suite</p>
+                <p>Pompton Plains, NJ 07444</p>
+                <p>973-671-8326</p>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
 
 
 
