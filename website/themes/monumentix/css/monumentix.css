@@ -1,0 +1,87 @@
+
+body{font-family: 'Roboto Condensed', sans-serif;}
+
+.navbar-default{ background-color: #1B3244; border-color:#162836;}
+
+.wrap > #breadcrumbwrapper{
+    padding: 60px 5px 0px;
+}
+
+#breadcrumbwrapper{
+  background-color:#255986;
+}
+
+#herobanner{
+  margin-top:0px;
+  padding-top:80px;
+  background-color:#223F55;
+  color:#efefef;
+  text-shadow:4px 2px 2px #000;
+  border-bottom:4px solid #162836;
+
+}
+/*-- Jumbotron tweaks --*/
+.jumbotron {
+    text-align: center;
+    border-color:#15344e;
+    background-color:#223F55;
+    background-image: url(../images/code-background.png);
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+
+#aboutme{
+  padding:10px;
+  background-color:#2A4F6A;
+  padding-top:20px;
+  padding-bottom:20px;
+  color:#eee;
+  font-size:120%;
+  text-shadow:1px 1px 1px #333;
+  border-bottom:4px solid #162836;
+}
+
+#whatido{
+  background-color:#356385;
+  padding-top:20px;
+  padding-bottom:20px;
+  border-bottom:4px solid #15344e;
+}
+
+#thingsivedone{
+    background-color:#e6e8e9;
+    border-bottom:4px solid #15344e;
+    padding:10px 0px 20px 0px;
+}
+
+#searchlightcomics-screenshot{
+  margin:40px 0px 60px 0px;
+}
+
+#techiuse{
+    background-color:#bdccd7;
+    border-bottom:4px solid #15344e;
+    padding:10px 0px 20px 0px;
+}
+
+
+
+.footer{
+    background-color: #23547c;
+    padding: 20px 0 20px 0 ;
+}
+
+h1, h2, h3, h4, h5 { font-family: 'Fjalla One', sans-serif; }
+
+.no-padding{
+  margin-left:0;
+  margin-right:0;
+  padding-left:0;
+  padding-right:0;
+}
+
+.shadow{text-shadow:2px 2px 2px #333;}
+.shadowbox{box-shadow:5px 5px 5px #333;}
+
+.img-coder-logo-small{border:5px solid #15344e; margin:10px;}
+.img-coder-logo-large{border:5px solid #15344e;}
