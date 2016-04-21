@@ -11,7 +11,7 @@ use yii\bootstrap\NavBar;
 
 <div class="wrap">
   <?php include('menu.php') ;?>
-    <div class="container-fluid no-padding">
+    <div class="container">
       <?= Alert::widget() ?>
       <?= $content ?>
     </div>
