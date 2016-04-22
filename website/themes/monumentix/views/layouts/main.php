@@ -12,10 +12,16 @@ use yii\widgets\Breadcrumbs;
 
 <div class="wrap">
   <?php include('menu.php') ;?>
+
+  <div id="breadcrumbWrapper" class="container-fluid ">
     <div class="container">
       <?= Breadcrumbs::widget([
           'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
       ]) ?>
+    </div>
+  </div>
+
+    <div class="container">
       <?= Alert::widget() ?>
       <?= $content ?>
     </div>
