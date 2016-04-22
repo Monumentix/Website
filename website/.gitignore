@@ -17,7 +17,7 @@ Thumbs.db
 
 # composer vendor dir
 /vendor
-/vendor/*
+
 
 # composer itself is not needed
 composer.phar
@@ -31,3 +31,4 @@ phpunit.phar
 /phpunit.xml
 
 /_protected/frontend/runtime
+/_protected/vendor/
