@@ -44,10 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter' => $searchModel->statusList,
                 'value' => function ($data) {
                     return $data->getStatusName($data->status);
-                },
-                'contentOptions'=>function($model, $key, $index, $column) {
-                    return ['class'=>CssHelper::BlogStatusCss($model->statusName)];
-                }
+                },                
             ],
 
             ['class' => 'yii\grid\ActionColumn',
