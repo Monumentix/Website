@@ -1,21 +1,29 @@
 <?php
 use yii\helpers\Url;
+use kartik\icons\Icon;
 
 /* @var $this yii\web\View */
 $this->title = 'Blogs';
 ?>
-
-    <h2>
+<div class="row">
+  <div class="col-sm-12">
+    <h2 class="blog-title">
         <a href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug])?> "> <?= $model->title ?></a>
     </h2>
-
-    <p class="time"><span class="glyphicon glyphicon-time"></span>
-        <?= Yii::t('app','Published on').' '.date('F j, Y, g:i a', $model->created_at) ?></p>
-
+  </div>
+  <div class="col-sm-12">
+    <p class="time">
+      <?=Icon::show('clock-o');?>   <?= Yii::t('app','Published on').' '.date('M j, Y', $model->created_at) ?> - <?=$model->getAuthorName(); ?> </p>
+  </div>
+  <div class="col-sm-12">
     <p><?= $model->summary ?></p>
+    <a class="btn btn-xs btn-success shadow " href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug]) ?>">
 
-    <a class="btn btn-primary" href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug])?>" >
-        <?= yii::t('app','Read more'); ?><span class="glyphicon glyphicon-chevron-right"></span>
+      <?= yii::t('app','Read more'); ?>
+      &nbsp;
+      <?=Icon::show('arrow-circle-right');?>
+
     </a>
-
-    <hr class="blog-devider">
+  </div>
+</div>
+<hr class="blog-devider">

@@ -17,6 +17,8 @@ class BlogPostWidget extends Widget{
   public $blogPost ;
   public $postCount ;
 
+  public $action;
+
   public function init(){
     parent::init();
 
@@ -24,6 +26,9 @@ class BlogPostWidget extends Widget{
       $this->postCount = 1;
     }
 
+    if($this->action === null){
+      $this->action = 'latestPosts';
+    }
 
 
 
@@ -31,13 +36,40 @@ class BlogPostWidget extends Widget{
 
   public function run(){
 
-    $blogs = $this->getLatestPost();
+    switch($this->action){
+      case 'latestPosts':
+        $blogs = $this->getLatestPost();
 
-    return $this->render('Blog/latestFooter.php', [
-        'model' => $blogs,
-    ]);
+          return $this->render('Blog/latestFooter.php', [
+              'model' => $blogs,
+          ]);
+
+        break;
+
+      case 'latestTitles':
+        $blogs = $this->getLatestPost();
+
+          return $this->render('Blog/latestTitles.php', [
+              'model' => $blogs,
+          ]);
+
+        break;
+
+      case 'archiveListing':
+        $blogs = $this->getArchiveListing();
+
+        return $this->render('Blog/archiveListing.php', [
+            'model' => $blogs,
+        ]);
+
+      default:
+        break;
+    }
+
+
 
   }
+
 
   private function getLatestPost(){
     $published = true;
@@ -50,5 +82,16 @@ class BlogPostWidget extends Widget{
     return $blogs;
   }
 
+
+  private function getArchiveListing(){
+    $published = true;
+
+    $searchModel = new BlogSearch();
+    $dataProvider = $searchModel->archive(Yii::$app->request->queryParams, $this->postCount, $published);
+
+    $blogs=$dataProvider->getModels();
+
+    return $blogs;
+  }
 
 }//end class

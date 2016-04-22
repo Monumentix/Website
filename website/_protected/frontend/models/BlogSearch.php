@@ -79,4 +79,39 @@ class BlogSearch extends Blog
 
         return $dataProvider;
     }
+
+
+
+
+    public function archive($params, $pageSize = 3, $published = false)
+    {
+        $query = Blog::find();
+        $query->select(['DATE_FORMAT(from_unixtime(created_at),"%M") as postMonth','id','slug','user_id']);
+        $query->groupBy('postMonth');
+
+        // this means that editor is trying to see Blogs
+        // we will allow him to see published ones and drafts made by him
+        if ($published === true)
+        {
+            $query->where(['status' => Blog::STATUS_PUBLISHED]);
+            $query->orWhere(['user_id' => Yii::$app->user->id]);
+        }
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'sort'=> ['defaultOrder' => ['created_at' => SORT_DESC]],
+            'pagination' => [
+                'pageSize' => $pageSize,
+            ]
+        ]);
+
+        if (!($this->load($params) && $this->validate())) {
+            return $dataProvider;
+        }
+
+
+
+        return $dataProvider;
+    }
+
 }

@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ListView;
+use frontend\components\BlogPostWidget;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\ArticleSearch */
@@ -30,20 +31,12 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Blog');
         ]) ?>
         </div>
         <div class="col-md-3">
-          <div class="panel panel-monumentix">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                Archive
-              </h3>
-            </div>
-            <div class="panel-body">
-              <p>um ei ocurreret concludaturque. Vim ut vide etiam ignota, mea in ignota animal. Case utamur tibique at vel. Ei eum tota ornatus </p>
-            </div>
-            <div class="panel-footer">
-              <p class="text-center">Some simple footer data </p>
-            </div>
+          <?=BlogPostWidget::widget(['postCount'=>5,'action'=>'latestTitles']) ?>
+          <?=BlogPostWidget::widget(['postCount'=>5,'action'=>'archiveListing']) ?>
 
-          </div>
+
+
+          
 
           <div class="panel panel-monumentix">
             <div class="panel-heading">
@@ -60,6 +53,23 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Blog');
               <li>Item 1</li>
             </div>
           </div>
+
+          <div class="panel panel-monumentix">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                Tags
+              </h3>
+            </div>
+            <div class="panel-body">
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+            </div>
+          </div>
+
 
         </div>
 

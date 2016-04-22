@@ -24,6 +24,8 @@ use Yii;
  */
 class Blog extends ActiveRecord
 {
+    public $postMonth;
+
     const STATUS_DRAFT = 1;
     const STATUS_PUBLISHED = 2;
 
