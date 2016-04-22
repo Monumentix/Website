@@ -8,7 +8,7 @@ use yii\widgets\ListView;
 
 $this->title = Yii::t('app', 'Blog');
 
-$this->params['breadcrumbs'][] = Yii::t('app', 'Articles');
+$this->params['breadcrumbs'][] = Yii::t('app', 'Blog');
 ?>
 <div class="blog-index">
     <h1>
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Articles');
     <hr class="top">
 
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-9">
         <?= ListView::widget([
             'summary' => false,
             'dataProvider' => $dataProvider,
@@ -29,12 +29,40 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Articles');
             },
         ]) ?>
         </div>
-        <div class="col-md-1">
+        <div class="col-md-3">
+          <div class="panel panel-monumentix">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                Archive
+              </h3>
+            </div>
+            <div class="panel-body">
+              <p>um ei ocurreret concludaturque. Vim ut vide etiam ignota, mea in ignota animal. Case utamur tibique at vel. Ei eum tota ornatus </p>
+            </div>
+            <div class="panel-footer">
+              <p class="text-center">Some simple footer data </p>
+            </div>
+
+          </div>
+
+          <div class="panel panel-monumentix">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                Categories
+              </h3>
+            </div>
+            <div class="panel-body">
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+              <li>Item 1</li>
+            </div>
+          </div>
 
         </div>
+
     </div>
-
-    <hr class="top">
-
 
 </div>

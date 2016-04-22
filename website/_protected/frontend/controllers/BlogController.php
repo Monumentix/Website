@@ -23,7 +23,7 @@ class BlogController extends FrontendController
          * How many Blogs we want to display per page.
          * @var integer
          */
-        $pageSize = 1;
+        $pageSize = 5;
 
         /**
          * Blogs have to be published.
@@ -34,7 +34,7 @@ class BlogController extends FrontendController
         $searchModel = new BlogSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $pageSize, $published);
 
-        return $this->render('index', [            
+        return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);
     }

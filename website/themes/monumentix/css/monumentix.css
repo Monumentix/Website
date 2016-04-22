@@ -1,7 +1,33 @@
 
 body{font-family: 'Roboto Condensed', sans-serif;}
 
-.navbar-default{ background-color: #1B3244; border-color:#162836; box-shadow:0px 0px 2px #000;}
+.navbar-default{
+  background-color: #1B3244;
+  border-color:#162836;
+  box-shadow:0px 0px 2px #000;
+  font-family: 'Fjalla One', sans-serif;
+  font-size:110%;
+}
+
+.navbar-nav>li>a{
+  border-left:1px solid #1B3244;
+  border-right:1px solid #1B3244;
+}
+
+.navbar-nav>.active>a{
+  background-color:#bdccd7 !important;
+  color:#162836 !important;
+  border-left:1px solid #bdccd7;
+  border-right:1px solid #bdccd7;
+}
+
+.navbar-nav>li>a:hover, .navbar-nav>li>a:focus{
+  background-color:#bdccd7 !important;
+  color:#162836 !important;
+  border-left:1px solid #1B3244;
+  border-right:1px solid #1B3244;
+}
+
 
 #breadcrumbWrapper{
   padding: 50px 0px 0px 0px;
@@ -15,15 +41,10 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   padding: 10px 10px 10px 10px;
 }
 
-/*
-.wrap > #breadcrumbwrapper{
-    padding: 60px 5px 0px;
-}
 
-#breadcrumbwrapper{
-  background-color:#255986;
+.wrap > .container{
+    padding: 0px 15px 20px;
 }
-*/
 
 #herobanner{
   margin-top:0px;
@@ -193,7 +214,7 @@ body{font-family: 'Roboto Condensed', sans-serif;}
 
 .footer{
     text-shadow:2px 2px 1px #333;
-    color:#eee;
+    color:#e3e3e3;
     background-color: #223F55;
     padding: 20px 0 20px 0 ;
 }
@@ -202,7 +223,7 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   color:#99bcdb;
 }
 .footer a:hover{
-  color:#337ab7;
+  color:#e3e3e3;
 }
 
 .footer a.btn, .footer a.btn:active, .footer a.btn:hover{
@@ -213,6 +234,28 @@ body{font-family: 'Roboto Condensed', sans-serif;}
 
 
 h1, h2, h3, h4, h5 { font-family: 'Fjalla One', sans-serif; }
+
+
+.panel-monumentix{
+  background-color:#356385;
+}
+
+.panel-monumentix .panel-title{
+  font-size:120%;
+  text-shadow:2px 2px 1px #333;
+  color:#e3e3e3;
+}
+
+.panel-monumentix .panel-body{
+  background-color: #e6e8e9;
+  font-size:110%;
+}
+
+.panel-monumentix .panel-footer{
+  border-top: 1px #356385 solid;
+  background-color: #e3e3e3;
+}
+
 
 .no-padding{
   margin-left:0;
