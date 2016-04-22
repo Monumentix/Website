@@ -16,6 +16,7 @@ class ComposerStaticInit83574bd84c269f01edde6a06a963fd8f
         'y' => 
         array (
             'yii\\swiftmailer\\' => 16,
+            'yii\\jui\\' => 8,
             'yii\\gii\\' => 8,
             'yii\\faker\\' => 10,
             'yii\\debug\\' => 10,
@@ -32,6 +33,11 @@ class ComposerStaticInit83574bd84c269f01edde6a06a963fd8f
         'm' => 
         array (
             'mihaildev\\ckeditor\\' => 19,
+        ),
+        'k' => 
+        array (
+            'kartik\\icons\\' => 13,
+            'kartik\\base\\' => 12,
         ),
         'c' => 
         array (
@@ -51,6 +57,10 @@ class ComposerStaticInit83574bd84c269f01edde6a06a963fd8f
         'yii\\swiftmailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2-swiftmailer',
+        ),
+        'yii\\jui\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yiisoft/yii2-jui',
         ),
         'yii\\gii\\' => 
         array (
@@ -92,6 +102,14 @@ class ComposerStaticInit83574bd84c269f01edde6a06a963fd8f
         'mihaildev\\ckeditor\\' => 
         array (
             0 => __DIR__ . '/..' . '/mihaildev/yii2-ckeditor',
+        ),
+        'kartik\\icons\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-icons',
+        ),
+        'kartik\\base\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-krajee-base',
         ),
         'cebe\\markdown\\' => 
         array (
