@@ -24,14 +24,14 @@ use yii\widgets\ActiveForm;
 
         <?= $form->field($model, 'status')->dropDownList($model->statusList) ?>
 
-        <?= $form->field($model, 'category')->dropDownList($model->categoryList) ?>
+        <?php /* = $form->field($model, 'category')->dropDownList($model->categoryList) */?>
 
     </div>
-    </div> 
+    </div>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') 
-            : Yii::t('app', 'Update'), ['class' => $model->isNewRecord 
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create')
+            : Yii::t('app', 'Update'), ['class' => $model->isNewRecord
             ? 'btn btn-success' : 'btn btn-primary']) ?>
 
         <?= Html::a(Yii::t('app', 'Cancel'), ['article/index'], ['class' => 'btn btn-default']) ?>

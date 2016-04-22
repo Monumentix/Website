@@ -156,6 +156,7 @@ class Blog extends ActiveRecord
      * @param  null|integer $category Category integer value if sent to method.
      * @return string                 Nicely formatted category.
      */
+     /*
     public function getCategoryName($category = null)
     {
         $category = (empty($category)) ? $this->category : $category ;
@@ -173,13 +174,14 @@ class Blog extends ActiveRecord
             return Yii::t('app', 'Sport');
         }
     }
+*/
 
     /**
      * Returns the array of possible article category values.
      *
      * @return array
      */
-    public function getCategoryList()
+/*    public function getCategoryList()
     {
         $statusArray = [
             self::CATEGORY_ECONOMY => Yii::t('app', 'Economy'),
@@ -189,4 +191,6 @@ class Blog extends ActiveRecord
 
         return $statusArray;
     }
+    */
+    
 }

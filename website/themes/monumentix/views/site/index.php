@@ -1,7 +1,10 @@
 <?php
 use yii\helpers\Html;
+use yii\widgets\ListView;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
+use frontend\widgets\Alert;
+
 
 
 /* @var $this yii\web\View */
@@ -11,13 +14,16 @@ $this->title = Yii::t('app', Yii::$app->name);
 
 <div id="herobanner" class="container-fluid">
   <div class="container">
+
+    <?= Alert::widget() ?>
+
     <div class="jumbotron ">
 
         <img class="center-block img-circle img-responsive img-coder-logo-large" src="<?=$this->theme->baseUrl?>/images/coder.jpg">
 
 
         <h1>Monumentix - Brian Ridsdale</h1>
-        <p class="lead"><span class="glyphicon glyphicon-cloud"></span> Full Stack Development  <span class="glyphicon glyphicon-cloud"></span>
+        <p class="lead"><span class="glyphicon glyphicon-cloud"></span> Full Stack Developer <span class="glyphicon glyphicon-cloud"></span>
           |
           <strong>&lt;&gt;</strong> Creative Coder  <strong>&lt;/&gt;</strong>  </p>
         <p>
@@ -25,7 +31,7 @@ $this->title = Yii::t('app', Yii::$app->name);
           &nbsp; &nbsp;
           <a class="btn btn-lg btn-success shadow" href="#contactme"><span class="glyphicon glyphicon-flash"></span> Hire Me</a>
         </p>
-
+        <div id="about"></div>
     </div>
   </div>
 </div>
@@ -61,7 +67,7 @@ $this->title = Yii::t('app', Yii::$app->name);
         <div id="" class="row">
             <div class="col-lg-12">
                 <h3 class="text-center">What I do</h3>
-                <p class="text-center">While this quote doesnt directly mention all the layers in many of the current cloud based technology stacks, the gist is accurate.<p>
+
                 <blockquote class="blockquote">
                   <p>The term full-stack means developers who are comfortable working with both back-end and front-end technologies.</p>
                   <p>To be more specific, it means that the developer can work with databases, PHP, HTML, CSS, JavaScript and everything in between, also, venturing as far as converting Photoshop designs to front-end code.</p>
@@ -69,6 +75,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                   <footer>George Fekete - <cite title="Being A Full Stack Developer"><a href="http://www.sitepoint.com/full-stack-developer/">Being a Full Stack Developer</a></cite></footer>
                 </blockquote>
 
+                <h5 class="text-center"><i>*While this quote doesnt directly mention all the layers in many of the current cloud based technology stacks, the idea is accurate.*</i><h5>
 
             </div>
             <hr>
@@ -233,100 +240,38 @@ $this->title = Yii::t('app', Yii::$app->name);
 
 
 
-    <div id="blogposts" class="container-fluid ">
-      <div class="container">
-        <div id="" class="row">
-          <div class="col-lg-12">
-            <h3 class="text-center">Blog Posts : <small class="lead">Project Updates and Information</small></h3>
-            <div id="blogPostsRow" class="row center-block">
+  <div id="blogposts" class="container-fluid ">
+    <div class="container">
+      <div id="" class="row">
+        <div class="col-lg-12">
+          <h3 class="text-center">Blog Posts : <small class="lead">Project Updates and Information</small></h3>
+          <div id="blogPostsRow" class="row center-block">
 
-              <div class="col-lg-4">
-                <div class="postPreview">
-                  <h4>Title 1</h4>
-                  <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
-                  <div class="text-right">
-                    <a class="text-right btn btn-xs btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
-                  </div>
-                </div>
-                <div class="postDetails text-center">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      01/01/2016
-                    </div>
-                    <div class="col-xs-6">
-                      Brian Ridsdale
-                    </div>
-                    <div class="col-xs-12">
-                    AWS, PHP, Cloud, Networking, Magento
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <?= ListView::widget([
+                'summary' => false,
+                'dataProvider' => $blogDataProvider,
+                'emptyText' => Yii::t('app', 'We haven\'t created any Blogs yet.'),
+                'itemOptions' => ['class' => 'item'],
+                'itemView' => function ($blogModel, $key, $index, $widget) {
+                    return $this->render('_blog', ['model' => $blogModel]);
+                },
+              ])
+            ?>
 
-              <div class="col-lg-4">
-                <div class="postPreview">
-                  <h4>Title 1</h4>
-                  <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
-                  <div class="text-right">
-                    <a class="text-right btn btn-xs btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
-                  </div>
-                </div>
-                <div class="postDetails text-center">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      01/01/2016
-                    </div>
-                    <div class="col-xs-6">
-                      Brian Ridsdale
-                    </div>
-                    <div class="col-xs-12">
-                    AWS, PHP, Cloud, Networking, Magento
-                    </div>
-                  </div>
-                </div>
-              </div>
+          </div> <!--End of row-->
 
+          <div class="row">
 
-              <div class="col-lg-4">
-                <div class="postPreview">
-                  <h4>Title 1</h4>
-                  <p> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.</p>
-                  <div class="text-right">
-                    <a class="text-right btn btn-xs btn-success shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Read More</a>
-                  </div>
-                </div>
-                <div class="postDetails text-center">
-                  <div class="row">
-                    <div class="col-xs-6">
-                      01/01/2016
-                    </div>
-                    <div class="col-xs-6">
-                      Brian Ridsdale
-                    </div>
-                    <div class="col-xs-12">
-                    AWS, PHP, Cloud, Networking, Magento
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div> <!--End of row-->
-
-            <div class="row">
-
-              <h5 class="text-center">
-              Read more about our projects and technologies were are working with or have worked with.
-              <a class="text-right btn btn btn-primary shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Our Blog</a>
-            </h5>
-            </div> <!--End of row-->
-
-          </div>
+            <h5 class="text-center">
+            Read more about our projects and technologies were are working with or have worked with.
+            <a class="text-right btn btn btn-primary shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Our Blog</a>
+          </h5>
+          </div> <!--End of row-->
+          <div id="contact"></div>
         </div>
       </div>
     </div>
-
-
-
+  </div>
 
 
 

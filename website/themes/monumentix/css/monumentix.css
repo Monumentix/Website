@@ -16,12 +16,12 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   padding-top:80px;
   background-color:#223F55;
   color:#efefef;
-  text-shadow:4px 2px 2px #000;
   border-bottom:4px solid #162836;
 
 }
 /*-- Jumbotron tweaks --*/
 .jumbotron {
+    text-shadow:4px 2px 2px #000;
     text-align: center;
     border-color:#15344e;
     background-color:#223F55;
@@ -95,14 +95,38 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   margin-bottom:20px;
 }
 
-#blogposts .postPreview{
-  padding:10px;
+
+#blogposts .panel-blog{
   background-color:#356385;
+  border-top-left-radius:30px;
+  border-top-right-radius:30px;
+}
+#blogposts .panel-blog .panel-heading{
+  background-color: #356385;
+}
+#blogposts .panel-blog .panel-title{
   font-size:120%;
   text-shadow:2px 2px 1px #333;
   color:#e3e3e3;
-  border-top-left-radius:6px;
-  border-top-right-radius:6px
+}
+
+#blogposts .panel-blog .panel-body{
+  background-color: #e6e8e9;
+  font-size:110%;
+}
+#blogposts .panel-blog .panel-footer{
+  background-color: #356385;
+  text-shadow:2px 2px 1px #333;
+  color:#e3e3e3;
+}
+
+
+/*
+#blogposts h4 a, #blogposts h4 a:active{
+  color:#99bcdb;
+}
+#blogposts h4 a:hover{
+  color:#337ab7;
 }
 
 #blogposts .postDetails{
@@ -112,7 +136,7 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   border-bottom-left-radius:6px;
   border-bottom-right-radius:6px
 }
-
+*/
 
 #contactme{
   background-color:#356385;
@@ -140,6 +164,7 @@ body{font-family: 'Roboto Condensed', sans-serif;}
     color: #FFFFFF;
     padding: 0 12px;
     text-align: left;
+    margin-bottom:20px;
 }
 
 #contactme .contact-info p{

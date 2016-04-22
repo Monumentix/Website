@@ -38,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
 
     <?php endif ?>
-    
+
     </div>
 
     </h1>
@@ -58,10 +58,10 @@ $this->params['breadcrumbs'][] = $this->title;
             //     'label' => Yii::t('app', 'Status'),
             //     'value' => $model->statusName,
             // ],
-            [
+            /*[
                 'label' => Yii::t('app', 'Category'),
                 'value' => $model->categoryName,
-            ],
+            ],*/
             'created_at:dateTime',
             //'updated_at:dateTime',
         ],

@@ -8,6 +8,11 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+
+use frontend\models\Blog;
+use frontend\models\BlogSearch;
+
+
 use yii\helpers\Html;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -74,13 +79,9 @@ class SiteController extends Controller
         ];
     }
 
-//------------------------------------------------------------------------------------------------//
-// STATIC PAGES
-//------------------------------------------------------------------------------------------------//
 
     /**
      * Displays the index (home) page.
-     * Use it in case your home page contains static content.
      *
      * @return string
      */
@@ -89,7 +90,6 @@ class SiteController extends Controller
         $this->layout= 'homepage';
 
         $model = new ContactForm();
-
         if ($model->load(Yii::$app->request->post()) && $model->validate())
         {
             if ($model->contact(Yii::$app->params['adminEmail']))
@@ -105,8 +105,15 @@ class SiteController extends Controller
             return $this->refresh();
         }
 
+
+        $published = true;
+        $blogModel = new BlogSearch();
+        $blogDataProvider = $blogModel->search(Yii::$app->request->queryParams, 3, $published);
+
         return $this->render('index', [
-            'model' => $model,
+          'blogModel' => $blogModel,
+          'blogDataProvider' => $blogDataProvider,
+          'model' => $model,
         ]);
 
     }

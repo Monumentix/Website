@@ -25,6 +25,13 @@ use Yii;
  * - updateArticle      : allows admin+ roles to update all articles
  * - deleteArticle      : allows admin+ roles to delete articles
  * - adminArticle       : allows admin+ roles to manage articles
+ *
+ * - createBlog      : allows editor+ roles to create articles
+ * - updateOwnBlog   : allows editor+ roles to update own articles
+ * - updateBlog      : allows admin+ roles to update all articles
+ * - deleteBlog      : allows admin+ roles to delete articles
+ * - adminBlog       : allows admin+ roles to manage articles
+ *
  * - manageUsers        : allows admin+ roles to manage users (CRUD plus role assignment)
  *
  * Creates 1 rule:
@@ -71,7 +78,7 @@ class RbacController extends Controller
         // add "adminArticle" permission
         $adminArticle = $auth->createPermission('adminArticle');
         $adminArticle->description = 'Allows admin+ roles to manage articles';
-        $auth->add($adminArticle);  
+        $auth->add($adminArticle);
 
         // add "updateArticle" permission
         $updateArticle = $auth->createPermission('updateArticle');
@@ -86,6 +93,47 @@ class RbacController extends Controller
 
         // "updateOwnArticle" will be used from "updateArticle"
         $auth->addChild($updateOwnArticle, $updateArticle);
+
+
+        //-- BLOG --//
+        // add "createBlog" permission
+        $createBlog = $auth->createPermission('createBlog');
+        $createBlog->description = 'Allows editor+ roles to create blogs';
+        $auth->add($createBlog);
+
+        // add "deleteBlog" permission
+        $deleteBlog = $auth->createPermission('deleteBlog');
+        $deleteBlog->description = 'Allows admin+ roles to delete blogs';
+        $auth->add($deleteBlog);
+
+        // add "adminBlog" permission
+        $adminBlog = $auth->createPermission('adminBlog');
+        $adminBlog->description = 'Allows admin+ roles to manage blogs';
+        $auth->add($adminBlog);
+
+        // add "updateBlog" permission
+        $updateBlog = $auth->createPermission('updateBlog');
+        $updateBlog->description = 'Allows editor+ roles to update blogs';
+        $auth->add($updateBlog);
+
+        // add the "updateOwnBlog" permission and associate the rule with it.
+        $updateOwnBlog = $auth->createPermission('updateOwnBlog');
+        $updateOwnBlog->description = 'Update own blog';
+        $updateOwnBlog->ruleName = $rule->name;
+        $auth->add($updateOwnBlog);
+
+        // "updateOwnBlog" will be used from "updateBlog"
+        $auth->addChild($updateOwnBlog, $updateBlog);
+
+        //-- BLOG --//
+
+
+
+
+
+
+
+
 
         //---------- ROLES ----------//
 
@@ -104,11 +152,11 @@ class RbacController extends Controller
         // support can do everything that member and premium can, plus you can add him more powers
         $support = $auth->createRole('support');
         $support->description = 'Support staff';
-        $auth->add($support); 
+        $auth->add($support);
         $auth->addChild($support, $premium);
-        $auth->addChild($support, $member);    
+        $auth->addChild($support, $member);
 
-        // add "editor" role and give this role: 
+        // add "editor" role and give this role:
         // createArticle, updateOwnArticle and adminArticle permissions, plus he can do everything that support role can do.
         $editor = $auth->createRole('editor');
         $editor->description = 'Editor of this application';
@@ -117,8 +165,13 @@ class RbacController extends Controller
         $auth->addChild($editor, $createArticle);
         $auth->addChild($editor, $updateOwnArticle);
         $auth->addChild($editor, $adminArticle);
+        $auth->addChild($editor, $createBlog);
+        $auth->addChild($editor, $updateOwnBlog);
+        $auth->addChild($editor, $adminBlog);
 
-        // add "admin" role and give this role: 
+
+
+        // add "admin" role and give this role:
         // manageUsers, updateArticle adn deleteArticle permissions, plus he can do everything that editor role can do.
         $admin = $auth->createRole('admin');
         $admin->description = 'Administrator of this application';
@@ -127,15 +180,17 @@ class RbacController extends Controller
         $auth->addChild($admin, $manageUsers);
         $auth->addChild($admin, $updateArticle);
         $auth->addChild($admin, $deleteArticle);
+        $auth->addChild($admin, $updateBlog);
+        $auth->addChild($admin, $deleteBlog);
 
         // add "theCreator" role ( this is you :) )
         // You can do everything that admin can do plus more (if You decide so)
         $theCreator = $auth->createRole('theCreator');
         $theCreator->description = 'You!';
-        $auth->add($theCreator); 
+        $auth->add($theCreator);
         $auth->addChild($theCreator, $admin);
 
-        if ($auth) 
+        if ($auth)
         {
             $this->stdout("\nRbac authorization data are installed successfully.\n", Console::FG_GREEN);
         }
