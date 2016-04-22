@@ -30,3 +30,4 @@ phpunit.phar
 /phpunit.xml
 
 /_protected/frontend/runtime
+/_protected/vendor
