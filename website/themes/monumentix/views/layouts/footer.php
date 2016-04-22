@@ -1,6 +1,6 @@
 <?php
 use frontend\components\BlogPostWidget;
-
+use kartik\icons\Icon;
 ?>
 
 <footer class="footer">
@@ -10,18 +10,18 @@ use frontend\components\BlogPostWidget;
     <div class="row">
       <div class="col-lg-2 col-sm-6">
         <h4>Quick Links:</h4>
-        <ul>
-          <li> <a href="">About Me</a></li>
-          <li> <a href="">Contact Me</a></li>
-          <li> <a href="">Project Spotlight</a></li>
-          <li> <a href="">Blog</a></li>
-          <li> <a href="">GitHub</a></li>
+        <ul id="quicklinks">
+          <li> <a href="/#aboutme"><?=Icon::show('info-circle')?>About Me</a></li>
+          <li> <a href="/#contact"><?=Icon::show('envelope')?>Contact Me</a></li>
+          <li> <a href="/#showcase"><?=Icon::show('bullhorn')?>Spotlight Project</a></li>
+          <li> <a href="/blog"><?=Icon::show('rss-square')?>Blog</a></li>
+          <li> <a href="http://github.com/Monumentix" target="_blank"><?=Icon::show('github')?>GitHub</a></li>
         </ul>
       </div>
       <div class="col-lg-2 col-sm-6">
         <h4>Demo My Work</h4>
         <p>Interact with a demo application.</p>
-        <a class="btn btn-sm btn-success" href="#"><span class="glyphicon glyphicon-warning"></span> Demo & Samples</a>
+        <a class="btn btn-sm btn-warning btn-no-shadow btn-dark-text" href="#"><?=Icon::show('server');?> Demo & Samples</a>
       </div>
       <div class="col-lg-6 col-sm-6">
         <?=BlogPostWidget::widget(['postCount'=>1]) ?>
@@ -34,6 +34,11 @@ use frontend\components\BlogPostWidget;
           Pompton Plains, NJ 07444<br>
           <abb title="Phone">P:</abbr>&nbsp;(973)671-8326
         </address>
+        <p class="text-center">
+          <a class="btn btn-sm btn-primary" href="/#contact"><?=Icon::show('envelope');?> Contact Me </a>
+        </p>
+
+
       </div>
     </div>
     <!-- LOWER third -->

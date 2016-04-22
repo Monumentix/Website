@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+use kartik\icons\Icon;
 ?>
 
           <div class="col-lg-4">
@@ -11,7 +12,11 @@ use yii\helpers\Url;
                 <p> <?= $model->summary ?></p>
                 <div class="text-right">
                   <a class="btn btn-xs btn-success shadow " href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug]) ?>">
-                      <?= yii::t('app','Read more'); ?><span class="glyphicon glyphicon-chevron-right"></span>
+
+                    <?= yii::t('app','Read more'); ?>
+                    &nbsp;
+                    <?=Icon::show('arrow-circle-right');?>
+
                   </a>
                 </div>
               </div>

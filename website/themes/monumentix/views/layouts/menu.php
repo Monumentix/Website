@@ -3,6 +3,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use kartik\icons\Icon;
 ?>
 
 <?php
@@ -15,10 +16,10 @@ use yii\bootstrap\NavBar;
     ]);
 
     // everyone can see Home page
-    $menuItems[] = ['label' => Yii::t('app', 'Home'), 'url' => Url::to(['/','#'=>''])];
-    $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/#about']];
-    $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/#contact']];
-    $menuItems[] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/blog/index']];
+    $menuItems[] = ['label' => Icon::show('home').' '.Yii::t('app', 'Home'), 'url' => Url::to(['/','#'=>''])];
+    $menuItems[] = ['label' => Icon::show('info-circle').' '.Yii::t('app', 'About'), 'url' => ['/#about']];
+    $menuItems[] = ['label' => Icon::show('envelope').' '.Yii::t('app', 'Contact'), 'url' => ['/#contact']];
+    $menuItems[] = ['label' => Icon::show('rss-square').' '.Yii::t('app', 'Blog'), 'url' => ['/blog/index']];
 
     /*
 
@@ -42,13 +43,13 @@ use yii\bootstrap\NavBar;
     // display Signup and Login pages to guests of the site
     if (Yii::$app->user->isGuest)
     {
-         $menuItems[] = ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']];
+         $menuItems[] = ['label' =>Icon::show('sign-in').'&nbsp;'.Yii::t('app', 'Login'), 'url' => ['/site/login']];
     }
     // display Logout to all logged in users
     else
     {
         $menuItems[] = [
-            'label' => Yii::t('app', 'Logout'). ' (' . Yii::$app->user->identity->username . ')',
+            'label' => Icon::show('sign-out').'&nbsp;'.Yii::t('app', 'Login'). ' (' . Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],
             'linkOptions' => ['data-method' => 'post']
         ];
@@ -61,6 +62,7 @@ use yii\bootstrap\NavBar;
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => $menuItems,
+        'encodeLabels'=>false,
     ]);
     NavBar::end();
 ?>

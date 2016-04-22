@@ -25,7 +25,7 @@ $this->title = Yii::t('app', Yii::$app->name);
         <h1>Monumentix - Brian Ridsdale</h1>
         <p class="lead"><?=Icon::show('cloud');?> Full Stack Developer <?=Icon::show('cloud');?></span>
           |
-          <strong><?=Icon::show('code');?></strong> Creative Coder  <strong><?=Icon::show('code');?></strong>  </p>
+          <strong><?=Icon::show('code');?></strong> Programmer  <strong><?=Icon::show('code');?></strong>  </p>
         <p>
           <a class="btn btn-lg btn-primary shadow" href="#aboutme"><?=Icon::show('user');?> Know me Better</a>
           &nbsp; &nbsp;
@@ -75,7 +75,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                   <footer>George Fekete - <cite title="Being A Full Stack Developer"><a href="http://www.sitepoint.com/full-stack-developer/">Being a Full Stack Developer</a></cite></footer>
                 </blockquote>
 
-                <h5 class="text-center"><i>*While this quote doesnt directly mention all the layers in many of the current cloud based technology stacks, the idea is accurate.*</i><h5>
+                <P class="text-center">While this quote doesnt mention all the layers in many current cloud based technology stacks, but being comfortable with all the pieces that allow an application to run gives the devloper freedom to find an ideal solution for each unique challenge presented. <p>
                 <hr>
             </div>
             <hr>
@@ -115,12 +115,12 @@ $this->title = Yii::t('app', Yii::$app->name);
 
                   <div class="col-xs-4 col-sm-4">
                     <div class="row">
-                      <div class="col-sm-6 col-sm-offset-4">
+                      <div class="col-sm-6 col-sm-offset-3">
                         <img src="<?=$this->theme->baseUrl?>/images/aws_logo_web.png" class="center-block img img-responsive ">
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-sm-6 col-sm-offset-4">
+                      <div class="col-sm-6 col-sm-offset-3">
                         <img src="<?=$this->theme->baseUrl?>/images/github.png" class="center-block img img-responsive ">
                       </div>
                     </div>
@@ -160,6 +160,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                   </div>
               </div>
             </div>
+            <div id="showcase"></div>
         </div>
       </div>
   </div>
@@ -268,7 +269,12 @@ $this->title = Yii::t('app', Yii::$app->name);
 
             <h5 class="text-center">
             Read more about our projects and technologies were are working with or have worked with.
-            <a class="text-right btn btn btn-primary shadow" href="#"><span class="glyphicon glyphicon-share-alt"></span> Our Blog</a>
+            <a class="text-right btn btn btn-primary shadow" href="#">
+
+              <?= yii::t('app','My Blog'); ?>
+              &nbsp;
+              <?=Icon::show('arrow-circle-right');?>
+              </a>
           </h5>
           </div> <!--End of row-->
           <div id="contact"></div>

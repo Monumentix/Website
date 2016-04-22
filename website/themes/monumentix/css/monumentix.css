@@ -12,6 +12,7 @@ body{font-family: 'Roboto Condensed', sans-serif;}
 .navbar-nav>li>a{
   border-left:1px solid #1B3244;
   border-right:1px solid #1B3244;
+  text-shadow:2px 2px 3px #000;
 }
 
 .navbar-nav>.active>a{
@@ -19,6 +20,7 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   color:#162836 !important;
   border-left:1px solid #bdccd7;
   border-right:1px solid #bdccd7;
+  text-shadow:none;
 }
 
 .navbar-nav>li>a:hover, .navbar-nav>li>a:focus{
@@ -26,6 +28,7 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   color:#162836 !important;
   border-left:1px solid #1B3244;
   border-right:1px solid #1B3244;
+  text-shadow:none;
 }
 
 
@@ -219,6 +222,15 @@ body{font-family: 'Roboto Condensed', sans-serif;}
     padding: 20px 0 20px 0 ;
 }
 
+.btn-no-shadow {
+  text-shadow:none;
+}
+
+.btn-dark-text {
+  color:#223F55 !important;
+  font-weight:bold;
+}
+
 .footer a, .footer a:active{
   color:#99bcdb;
 }
@@ -232,6 +244,9 @@ body{font-family: 'Roboto Condensed', sans-serif;}
 
 .footer hr{margin:10px 0px; border-color:#eee}
 
+#quicklinks {padding-left:0px;}
+#quicklinks li {list-style-type:none;}
+#quicklinks li {list-style-type:none;}
 
 h1, h2, h3, h4, h5 { font-family: 'Fjalla One', sans-serif; }
 
