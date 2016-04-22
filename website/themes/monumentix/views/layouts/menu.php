@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 ?>
@@ -14,10 +15,10 @@ use yii\bootstrap\NavBar;
     ]);
 
     // everyone can see Home page
-    $menuItems[] = ['label' => Yii::t('app', 'Home'), 'url' => ['/#']];
+    $menuItems[] = ['label' => Yii::t('app', 'Home'), 'url' => Url::to(['site/index'])];
     $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/#about']];
     $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/#contact']];
-    $menuItems[] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/blog']];
+    $menuItems[] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/blog/index']];
 
     /*
 
@@ -41,8 +42,7 @@ use yii\bootstrap\NavBar;
     // display Signup and Login pages to guests of the site
     if (Yii::$app->user->isGuest)
     {
-        $menuItems[] = ['label' => Yii::t('app', 'Signup'), 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']];
+         $menuItems[] = ['label' => Yii::t('app', 'Login'), 'url' => ['/site/login']];
     }
     // display Logout to all logged in users
     else

@@ -45,9 +45,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function ($data) {
                     return $data->getStatusName($data->status);
                 },
-                'contentOptions'=>function($model, $key, $index, $column) {
+                /*'contentOptions'=>function($model, $key, $index, $column) {
                     return ['class'=>CssHelper::BlogStatusCss($model->statusName)];
-                }
+                }*/
             ],
 
             ['class' => 'yii\grid\ActionColumn',

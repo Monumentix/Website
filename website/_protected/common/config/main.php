@@ -32,6 +32,10 @@ return [
             'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'rules'=>[
+              '<alias:index|login>' => 'site/<alias>',
+              'blog/<id:\d+>'=>'blog/view',         
+            ],
         ],
         'session' => [
             'class' => 'yii\web\DbSession',
