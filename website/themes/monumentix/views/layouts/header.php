@@ -1,11 +1,12 @@
 <?php
 use frontend\assets\AppAsset;
 use yii\helpers\Html;
-
+use kartik\icons\Icon;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
 AppAsset::register($this);
+Icon::map($this);
 
 ?>
 <?php $this->beginPage() ?>

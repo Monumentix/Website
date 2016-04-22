@@ -4,7 +4,7 @@ use yii\widgets\ListView;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use frontend\widgets\Alert;
-
+use kartik\icons\Icon;
 
 
 /* @var $this yii\web\View */
@@ -23,13 +23,13 @@ $this->title = Yii::t('app', Yii::$app->name);
 
 
         <h1>Monumentix - Brian Ridsdale</h1>
-        <p class="lead"><span class="glyphicon glyphicon-cloud"></span> Full Stack Developer <span class="glyphicon glyphicon-cloud"></span>
+        <p class="lead"><?=Icon::show('cloud');?> Full Stack Developer <?=Icon::show('cloud');?></span>
           |
-          <strong>&lt;&gt;</strong> Creative Coder  <strong>&lt;/&gt;</strong>  </p>
+          <strong><?=Icon::show('code');?></strong> Creative Coder  <strong><?=Icon::show('code');?></strong>  </p>
         <p>
-          <a class="btn btn-lg btn-primary shadow" href="#aboutme"><span class="glyphicon glyphicon-user"></span> Know me Better</a>
+          <a class="btn btn-lg btn-primary shadow" href="#aboutme"><?=Icon::show('user');?> Know me Better</a>
           &nbsp; &nbsp;
-          <a class="btn btn-lg btn-success shadow" href="#contactme"><span class="glyphicon glyphicon-flash"></span> Hire Me</a>
+          <a class="btn btn-lg btn-success shadow" href="#contactme"><?=Icon::show('thumbs-up');?> Hire Me</a>
         </p>
         <div id="about"></div>
     </div>
@@ -41,14 +41,14 @@ $this->title = Yii::t('app', Yii::$app->name);
   <div class="container"
     <div class="row">
         <div class="col-lg-8">
-            <h3>Monumentix / Brian Ridsdale</h3>
+            <h3><?=Icon::show('home');?>Monumentix / Brian Ridsdale</h3>
             <img class="pull-left img-circle img-responsive img-thumbnail img-coder-logo-small" src="<?=$this->theme->baseUrl?>/images/coder.jpg" style="width:120px;">
             <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
             <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,</p>
         </div>
 
         <div class="col-lg-4">
-            <h3>Experience</h3>
+            <h3><?=Icon::show('university');?>Experience</h3>
             <ul>
               <li>2001 - Complete Schooling <p>Small text about school</p></li>
               <li>2002 - 2009 NJ Transit <p>Noteable projects include N-Tier Ticket Inventory Application</p></li>
@@ -66,8 +66,8 @@ $this->title = Yii::t('app', Yii::$app->name);
     <div class="container">
         <div id="" class="row">
             <div class="col-lg-12">
-                <h3 class="text-center">What I do</h3>
-
+                <h3 class="text-center"><?=Icon::show('cloud');?> &nbsp; What I do &nbsp; <?=Icon::show('cloud');?> </h3>
+                <hr>
                 <blockquote class="blockquote">
                   <p>The term full-stack means developers who are comfortable working with both back-end and front-end technologies.</p>
                   <p>To be more specific, it means that the developer can work with databases, PHP, HTML, CSS, JavaScript and everything in between, also, venturing as far as converting Photoshop designs to front-end code.</p>
@@ -76,28 +76,28 @@ $this->title = Yii::t('app', Yii::$app->name);
                 </blockquote>
 
                 <h5 class="text-center"><i>*While this quote doesnt directly mention all the layers in many of the current cloud based technology stacks, the idea is accurate.*</i><h5>
-
+                <hr>
             </div>
             <hr>
             <div class="col-sm-6">
               <img src="">
-              <h3>Server / Networking / Hosting Enviroment</h3>
+              <h3><?=Icon::show('server');?> Server / Networking / Hosting Enviroment</h3>
               <p>Wanna launch a website?  No problem. Wait it needs auto scaling frontend servers seperated from your backend application servers.  No problem.  More you say, a seperate database cluster and reddis caching as well.
                 And you need notification of all this stuff sent to your phone. Sure i can do that.</p>
             </div>
             <div class="col-sm-6">
               <img src="">
-              <h3>Data Modeling and Business Logic</h3>
+              <h3><?=Icon::show('database');?> Data Modeling and Business Logic</h3>
               <p>If you dont measure it, you cant manage it.  With so much available data in our applications and outside systems it can get frusturating keeping track of it all.  I can help you manage all that data through implementation of buisness logic and rules alongside normalized relational data models, viewable through queryable web forms and reports. </p>
             </div>
             <div class="col-sm-6">
               <img src="">
-              <h3>User Interface / User Experience</h3>
+              <h3><?=Icon::show('desktop');?> User Interface / User Experience</h3>
               <p>From readable layouts, to meaningful error messages, to minamizing button clicks and application steps, i strive to ensure the final product always remains as easy as it can be for the application user. </p>
             </div>
             <div class="col-sm-6">
               <img src="">
-              <h3>Oh yeah I code too</h3>
+              <h3><?=Icon::show('code');?> AND i write code too!</h3>
               <p>While i write code, just as big a part is reading code.  Understanding external API's and MVC frameworks along with the affect they have on core business logic and its data has also become critical in our digital world. </p>
             </div>
         </div>
@@ -110,8 +110,7 @@ $this->title = Yii::t('app', Yii::$app->name);
     <div class="container">
         <div id="" class="row">
             <div class="col-lg-12">
-                <h3 class="text-center">Technology I Use</h3>
-
+                <h3 class="text-center"><?=Icon::show('server');?> Technology I Use</h3>
                 <div id="" class="row center-block">
 
                   <div class="col-xs-4 col-sm-4">
@@ -167,6 +166,8 @@ $this->title = Yii::t('app', Yii::$app->name);
 
 
 
+
+
   <div id="spotlight" class="container-fluid ">
     <div class="container">
       <div id="" class="row">
@@ -176,8 +177,9 @@ $this->title = Yii::t('app', Yii::$app->name);
                 <div class="col-sm-6">
 
                   <div class="row">
-                    <div class="col-sm-3">
-                      <img src="<?=$this->theme->baseUrl?>/images/aws_logo_web.png" class="center-block img img-responsive ">
+                    <div class="col-sm-3 text-right">
+                      <br>
+                      <?=Icon::show('cloud',['class'=>'fa-5x']);?>
                     </div>
                     <div class="col-sm-8">
                       <h3>Cloud Based Scalable Infastructre</h3>
@@ -188,8 +190,9 @@ $this->title = Yii::t('app', Yii::$app->name);
                   </div>
 
                   <div class="row">
-                    <div class="col-sm-3">
-                      <img src="<?=$this->theme->baseUrl?>/images/Magento-logo.png" class="center-block img img-responsive ">
+                    <div class="col-sm-3 text-right">
+                      <br>
+                      <?=Icon::show('github',['class'=>'fa-5x']);?>
                     </div>
                     <div class="col-sm-8">
                       <h3>Open Source Ecommerce Package</h3>
@@ -200,8 +203,9 @@ $this->title = Yii::t('app', Yii::$app->name);
                   </div>
 
                   <div class="row">
-                    <div class="col-sm-3">
-                      <img src="<?=$this->theme->baseUrl?>/images/yii-logo.png" class="center-block img img-responsive ">
+                    <div class="col-sm-3 text-right">
+                      <br>
+                      <?=Icon::show('desktop',['class'=>'fa-5x']);?>
                     </div>
                     <div class="col-sm-8">
                       <h3>Product Management Application</h3>

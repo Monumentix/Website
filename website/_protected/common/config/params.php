@@ -18,7 +18,7 @@ return [
      *
      * If set to true users will have to login using email/password combo.
      */
-    'lwe' => false, 
+    'lwe' => false,
 
     /**
      * Force Strong Password.
@@ -40,11 +40,14 @@ return [
      * Email used in contact form.
      * Users will send you emails to this address.
      */
-    'adminEmail' => 'admin@example.com', 
+    'adminEmail' => 'admin@example.com',
 
     /**
      * Not used in template.
      * You can set support email here.
      */
     'supportEmail' => 'support@example.com',
+
+    'icon-framework' => 'fa',
+
 ];
