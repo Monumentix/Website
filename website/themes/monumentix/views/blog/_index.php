@@ -12,8 +12,6 @@ $this->title = 'Blogs';
     <p class="time"><span class="glyphicon glyphicon-time"></span>
         <?= Yii::t('app','Published on').' '.date('F j, Y, g:i a', $model->created_at) ?></p>
 
-    <br>
-
     <p><?= $model->summary ?></p>
 
     <a class="btn btn-primary" href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug])?>" >

@@ -190,7 +190,7 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   color:#e3e3e3;
 }
 
-#contactme .contact-info{
+#contactme .contact-info, .blog-view .contact-info{
     background-color: #2A4F6A;
     border-radius: 5px;
     color: #FFFFFF;
@@ -199,14 +199,14 @@ body{font-family: 'Roboto Condensed', sans-serif;}
     margin-bottom:20px;
 }
 
-#contactme .contact-info p{
+#contactme .contact-info p, .blog-view .contact-info p{
     border-bottom: 2px dashed #15344e;
     margin: 0;
     padding: 12px 0;
     font-weight: bold;
 }
 
-#contactme .contact-info p:last-child{
+#contactme .contact-info p:last-child, .blog-view .contact-info p:last-child{
   border-bottom: none;
 }
 
@@ -269,3 +269,5 @@ h1, h2, h3, h4, h5 { font-family: 'Fjalla One', sans-serif; }
 
 .img-coder-logo-small{border:5px solid #15344e; margin:10px;}
 .img-coder-logo-large{border:5px solid #15344e;}
+
+.blog-view{padding-top:20px;}
