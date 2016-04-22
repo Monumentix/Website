@@ -15,7 +15,7 @@ use yii\bootstrap\NavBar;
     ]);
 
     // everyone can see Home page
-    $menuItems[] = ['label' => Yii::t('app', 'Home'), 'url' => Url::to(['site/index'])];
+    $menuItems[] = ['label' => Yii::t('app', 'Home'), 'url' => Url::to(['/','#'=>''])];
     $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/#about']];
     $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/#contact']];
     $menuItems[] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/blog/index']];

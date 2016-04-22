@@ -2,6 +2,7 @@
 namespace frontend\models;
 
 use common\models\User;
+use yii\behaviors\SluggableBehavior;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use Yii;
@@ -12,6 +13,7 @@ use Yii;
  * @property integer $id
  * @property integer $user_id
  * @property string $title
+ * @property string $slug
  * @property string $summary
  * @property string $content
  * @property integer $status
@@ -43,10 +45,11 @@ class Blog extends ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'title', 'summary', 'content', 'status'], 'required'],
+            [['user_id', 'title', 'summary', 'slug', 'content', 'status'], 'required'],
             [['user_id', 'status'], 'integer'],
             [['summary', 'content'], 'string'],
-            [['title'], 'string', 'max' => 255]
+            [['title'], 'string', 'max' => 255],
+            [['slug'], 'string', 'max' => 255]
         ];
     }
 
@@ -59,6 +62,12 @@ class Blog extends ActiveRecord
     {
         return [
             TimestampBehavior::className(),
+            [
+              'class' => SluggableBehavior::className(),
+              'attribute' => 'title',
+              // In case of attribute that contains slug has different name
+              // 'slugAttribute' => 'alias',
+            ]
         ];
     }
 
@@ -192,5 +201,5 @@ class Blog extends ActiveRecord
         return $statusArray;
     }
     */
-    
+
 }

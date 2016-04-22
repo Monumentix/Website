@@ -6,7 +6,7 @@ $this->title = 'Blogs';
 ?>
 
     <h2>
-        <a href=<?= Url::to(['blog/view', 'id' => $model->id]) ?>><?= $model->title ?></a>
+        <a href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug])?> "> <?= $model->title ?></a>
     </h2>
 
     <p class="time"><span class="glyphicon glyphicon-time"></span>
@@ -16,7 +16,7 @@ $this->title = 'Blogs';
 
     <p><?= $model->summary ?></p>
 
-    <a class="btn btn-primary" href=<?= Url::to(['blog/view', 'id' => $model->id]) ?>>
+    <a class="btn btn-primary" href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug])?>" >
         <?= yii::t('app','Read more'); ?><span class="glyphicon glyphicon-chevron-right"></span>
     </a>
 

@@ -34,7 +34,8 @@ return [
             'showScriptName' => false,
             'rules'=>[
               '<alias:index|login>' => 'site/<alias>',
-              'blog/<id:\d+>'=>'blog/view',         
+              'blog'=>'blog/index',         
+              'blog/<id:\d+>/<slug:[-a-zA-Z]+>'=>'blog/view',
             ],
         ],
         'session' => [

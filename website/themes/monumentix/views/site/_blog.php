@@ -5,12 +5,12 @@ use yii\helpers\Url;
           <div class="col-lg-4">
             <div class="panel panel-default panel-blog">
               <div class="panel-heading">
-                <h3 class="panel-title"><a href=<?= Url::to(['blog/view', 'id' => $model->id]) ?>><?= $model->title ?></a></h3>
+                <h3 class="panel-title"><a href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug]) ?>"><?= $model->title ?></a></h3>
               </div>
               <div class="panel-body">
                 <p> <?= $model->summary ?></p>
                 <div class="text-right">
-                  <a class="btn btn-xs btn-success shadow " href=<?= Url::to(['blog/view', 'id' => $model->id]) ?>>
+                  <a class="btn btn-xs btn-success shadow " href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug]) ?>">
                       <?= yii::t('app','Read more'); ?><span class="glyphicon glyphicon-chevron-right"></span>
                   </a>
                 </div>
