@@ -29,7 +29,6 @@ class m160421_220327_create_blog_table extends Migration
 
     public function down()
     {
-        $this->dropForeignKey('user_id','blog');
         $this->dropTable('blog');
     }
 }

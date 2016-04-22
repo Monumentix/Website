@@ -15,9 +15,9 @@ use yii\bootstrap\NavBar;
 
     // everyone can see Home page
     $menuItems[] = ['label' => Yii::t('app', 'Home'), 'url' => ['/site/index']];
-    $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/#aboutme']];
-    $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/#contactme']];
-    $menuItems[] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/article/index']];
+    $menuItems[] = ['label' => Yii::t('app', 'About'), 'url' => ['/#about']];
+    $menuItems[] = ['label' => Yii::t('app', 'Contact'), 'url' => ['/#contact']];
+    $menuItems[] = ['label' => Yii::t('app', 'Blog'), 'url' => ['/blog']];
 
     /*
 
@@ -37,7 +37,7 @@ use yii\bootstrap\NavBar;
     }
     */
 
-    /*
+
     // display Signup and Login pages to guests of the site
     if (Yii::$app->user->isGuest)
     {
@@ -53,7 +53,7 @@ use yii\bootstrap\NavBar;
             'linkOptions' => ['data-method' => 'post']
         ];
     }
-    */
+
 
 
 

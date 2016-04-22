@@ -1,3 +1,8 @@
+<?php
+use frontend\components\BlogPostWidget;
+
+?>
+
 <footer class="footer">
   <div class="container">
 
@@ -10,6 +15,7 @@
           <li> <a href="">Contact Me</a></li>
           <li> <a href="">Project Spotlight</a></li>
           <li> <a href="">Blog</a></li>
+          <li> <a href="">GitHub</a></li>
         </ul>
       </div>
       <div class="col-lg-2 col-sm-6">
@@ -18,9 +24,7 @@
         <a class="btn btn-sm btn-success" href="#"><span class="glyphicon glyphicon-warning"></span> Demo & Samples</a>
       </div>
       <div class="col-lg-6 col-sm-6">
-        <h4>Latest Blog Post:</h4>
-        <p><strong>Our Blog Post Title Goes Here </strong> - Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. </p>
-
+        <?=BlogPostWidget::widget(['postCount'=>1]) ?>
       </div>
       <div class="col-lg-2 col-sm-6">
         <h4>Get In Touch:</h4>

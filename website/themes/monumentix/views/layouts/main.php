@@ -3,6 +3,7 @@ use frontend\assets\AppAsset;
 use frontend\widgets\Alert;
 use yii\helpers\Html;
 use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
 ?>
 
 <?php include('header.php') ;?>
@@ -12,6 +13,9 @@ use yii\bootstrap\NavBar;
 <div class="wrap">
   <?php include('menu.php') ;?>
     <div class="container">
+      <?= Breadcrumbs::widget([
+          'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+      ]) ?>
       <?= Alert::widget() ?>
       <?= $content ?>
     </div>

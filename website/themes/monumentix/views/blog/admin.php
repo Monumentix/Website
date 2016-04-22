@@ -4,21 +4,21 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\ArticleSearch */
+/* @var $searchModel app\models\BlogSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Articles');
+$this->title = Yii::t('app', 'Blogs');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="articles-admin">
+<div class="blog-admin">
 
     <h1>
 
     <?= Html::encode($this->title) ?>
 
     <span class="pull-right">
-        <?= Html::a(Yii::t('app', 'Create Article'), ['create'], ['class' => 'btn btn-success']) ?>
-    </span>  
+        <?= Html::a(Yii::t('app', 'Create Blog'), ['create'], ['class' => 'btn btn-success']) ?>
+    </span>
 
     </h1>
 
@@ -46,17 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->getStatusName($data->status);
                 },
                 'contentOptions'=>function($model, $key, $index, $column) {
-                    return ['class'=>CssHelper::articleStatusCss($model->statusName)];
-                }
-            ],
-            [
-                'attribute'=>'category',
-                'filter' => $searchModel->categoryList,
-                'value' => function ($data) {
-                    return $data->getCategoryName($data->category);
-                },
-                'contentOptions'=>function($model, $key, $index, $column) {
-                    return ['class'=>CssHelper::articleCategoryCss($model->categoryName)];
+                    return ['class'=>CssHelper::BlogStatusCss($model->statusName)];
                 }
             ],
 
