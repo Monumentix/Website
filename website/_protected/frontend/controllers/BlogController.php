@@ -25,7 +25,7 @@ class BlogController extends FrontendController
          * How many Blogs we want to display per page.
          * @var integer
          */
-        $pageSize = 5;
+        $pageSize = 3;
 
         /**
          * Blogs have to be published.
@@ -80,7 +80,7 @@ class BlogController extends FrontendController
               $model->image->saveAs($strUniqueFilename);
               $model->blog_image=$strUniqueFilename;
             }
-            
+
             if($model->save()){
               return $this->redirect(['view', 'id' => $model->id]);
             }else{

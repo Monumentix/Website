@@ -167,9 +167,6 @@ class Blog extends ActiveRecord
 
 
 
-
-
-
     /**
      * Returns the article category in nice format.
      *

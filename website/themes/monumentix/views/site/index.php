@@ -257,6 +257,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                 'dataProvider' => $blogDataProvider,
                 'emptyText' => Yii::t('app', 'We haven\'t created any Blogs yet.'),
                 'itemOptions' => ['class' => 'item'],
+                'layout'=> '{items}',
                 'itemView' => function ($blogModel, $key, $index, $widget) {
                     return $this->render('_blog', ['model' => $blogModel]);
                 },

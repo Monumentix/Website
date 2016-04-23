@@ -11,7 +11,7 @@ use kartik\icons\Icon;
       <div class="col-md-2 col-sm-6">
         <h4>Quick Links:</h4>
         <ul id="quicklinks">
-          <li> <a href="/#aboutme"><?=Icon::show('info-circle')?>About Me</a></li>
+          <li> <a href="/#about"><?=Icon::show('info-circle')?>About Me</a></li>
           <li> <a href="/#contact"><?=Icon::show('envelope')?>Contact Me</a></li>
           <li> <a href="/#showcase"><?=Icon::show('bullhorn')?>Spotlight Project</a></li>
           <li> <a href="/blog"><?=Icon::show('rss-square')?>Blog</a></li>

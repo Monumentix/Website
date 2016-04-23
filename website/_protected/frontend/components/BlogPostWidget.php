@@ -47,7 +47,7 @@ class BlogPostWidget extends Widget{
         break;
 
       case 'latestTitles':
-        $blogs = $this->getLatestPost();
+        $blogs = $this->getLatestTitles();
 
           return $this->render('Blog/latestTitles.php', [
               'model' => $blogs,
@@ -71,6 +71,8 @@ class BlogPostWidget extends Widget{
   }
 
 
+
+
   private function getLatestPost(){
     $published = true;
 
@@ -79,6 +81,11 @@ class BlogPostWidget extends Widget{
 
     $blogs=$dataProvider->getModels();
 
+    return $blogs;
+  }
+
+  private function getLatestTitles(){
+    $blogs =BlogSearch::getLatestTitles();
     return $blogs;
   }
 

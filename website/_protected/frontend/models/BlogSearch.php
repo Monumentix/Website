@@ -125,4 +125,23 @@ class BlogSearch extends Blog
         return $dataProvider;
     }
 
+
+
+    /*
+    *   This needs to be revised to not use
+    *   so much hard coding in the query
+    *
+    */
+    public function getLatestTitles($limit = 3){
+      $query = Blog::find();
+      $query->select(['id','slug','title','user_id'])
+        ->from('blog')
+        ->limit($limit);
+      $rows = $query->all();
+
+      return $rows;
+
+    }
+
+
 }
