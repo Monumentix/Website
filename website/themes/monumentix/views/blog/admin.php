@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
             ],
             'title',
+            'tags',
             // status
             [
                 'attribute'=>'status',

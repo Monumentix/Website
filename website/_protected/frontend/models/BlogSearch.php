@@ -5,6 +5,8 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use Yii;
 
+use justinvoelker\tagging\TaggingQuery;
+
 /**
  * BlogSearch represents the model behind the search form about `app\models\Blog`.
  */
@@ -19,7 +21,7 @@ class BlogSearch extends Blog
     {
         return [
             [['id', 'user_id', 'status', 'created_at', 'updated_at'], 'integer'],
-            [['title', 'summary', 'content'], 'safe'],
+            [['title', 'tags','summary', 'content'], 'safe'],
         ];
     }
 
@@ -75,13 +77,22 @@ class BlogSearch extends Blog
 
         $query->andFilterWhere(['like', 'title', $this->title])
               ->andFilterWhere(['like', 'summary', $this->summary])
+              ->andFilterWhere(['like', 'tags', $this->tags])
               ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }
 
 
+    public function getTags(){
+      $query = new TaggingQuery;
+      $tags = $query
+        ->select('tags')
+        ->from('blog')
+        ->getTags();
 
+        return $tags;
+    }
 
     public function archive($params, $pageSize = 3, $published = false)
     {

@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ListView;
+use justinvoelker\tagging\TaggingWidget;
 use frontend\components\BlogPostWidget;
 
 /* @var $this yii\web\View */
@@ -34,26 +35,6 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Blog');
           <?=BlogPostWidget::widget(['postCount'=>5,'action'=>'latestTitles']) ?>
           <?=BlogPostWidget::widget(['postCount'=>5,'action'=>'archiveListing']) ?>
 
-
-
-          
-
-          <div class="panel panel-monumentix">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                Categories
-              </h3>
-            </div>
-            <div class="panel-body">
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-            </div>
-          </div>
-
           <div class="panel panel-monumentix">
             <div class="panel-heading">
               <h3 class="panel-title">
@@ -61,12 +42,10 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Blog');
               </h3>
             </div>
             <div class="panel-body">
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
+              <?=TaggingWidget::widget([
+                  'items'=>$tags,
+                  ]);
+              ?>
             </div>
           </div>
 

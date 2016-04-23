@@ -49,7 +49,7 @@ class Blog extends ActiveRecord
     {
         return [
             [['user_id', 'title', 'tags', 'summary', 'slug', 'content', 'status'], 'required'],
-            [['user_id', 'category_id','status'], 'integer'],
+            [['user_id', 'status'], 'integer'],
             [['summary', 'content', 'tags'], 'string'],
             [['title'], 'string', 'max' => 255],
             [['slug'], 'string', 'max' => 255]

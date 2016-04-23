@@ -34,7 +34,10 @@ class BlogController extends FrontendController
         $searchModel = new BlogSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams, $pageSize, $published);
 
+        $tags = BlogSearch::getTags();
+
         return $this->render('index', [
+            'tags'=>$tags,
             'dataProvider' => $dataProvider,
         ]);
     }

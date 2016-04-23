@@ -19,6 +19,8 @@ use yii\widgets\ActiveForm;
         <?= $form->field($model, 'content')->widget(CKEditor::className(),
             ['editorOptions' => [ 'preset' => 'full', 'inline' => false]]); ?>
 
+        <?= $form->field($model, 'tags')->textInput(['maxlength' => 255]) ?>
+
     <div class="row">
     <div class="col-lg-6">
 

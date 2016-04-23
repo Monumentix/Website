@@ -21,6 +21,7 @@ use kartik\icons\Icon;
     $menuItems[] = ['label' => Icon::show('envelope').' '.Yii::t('app', 'Contact'), 'url' => ['/#contact']];
     $menuItems[] = ['label' => Icon::show('rss-square').' '.Yii::t('app', 'Blog'), 'url' => ['/blog/index']];
 
+
     /*
 
     // we do not need to display Article/index, About and Contact pages to editor+ roles
@@ -43,16 +44,43 @@ use kartik\icons\Icon;
     // display Signup and Login pages to guests of the site
     if (Yii::$app->user->isGuest)
     {
-         $menuItems[] = ['label' =>Icon::show('sign-in').'&nbsp;'.Yii::t('app', 'Login'), 'url' => ['/site/login']];
+         $menuItems[] =['label' =>Icon::show('sign-in').'&nbsp;'.Yii::t('app', 'Login'), 'url' => ['/site/login']];
+
+
     }
     // display Logout to all logged in users
     else
     {
+ /*        $menuItems[] = [
+                'label' => Icon::show('sign-out').'&nbsp;'.Yii::t('app', 'Logout'). ' (' . Yii::$app->user->identity->username . ')',
+                'items'=>[
+                    ['label'=>'test','url'=>'#'],
+                  ],
+                'url' => ['/site/logout'],
+                'linkOptions' => ['data-method' => 'post']
+            ];  */
+
         $menuItems[] = [
-            'label' => Icon::show('sign-out').'&nbsp;'.Yii::t('app', 'Login'). ' (' . Yii::$app->user->identity->username . ')',
-            'url' => ['/site/logout'],
-            'linkOptions' => ['data-method' => 'post']
-        ];
+                'label' => Icon::show('user').'My Account',
+                'items'=>[
+                    [
+                      'label' => Icon::show('tasks').Yii::t('app', 'Admin Blog'),
+                      'url' => ['/blog/admin'],
+                    ],
+                    '<li class="divider"></li>',
+                    [
+                      'label'=>Icon::show('sign-out').'&nbsp;'.Yii::t('app', 'Logout'). ' (' . Yii::$app->user->identity->username . ')',
+                      'url' => ['/site/logout'],
+                      'linkOptions' => ['data-method' => 'post']
+                    ],
+
+                  ],
+                'url' => ['#'],
+            ];
+
+
+
+
     }
 
 
