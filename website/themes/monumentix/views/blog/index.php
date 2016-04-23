@@ -44,6 +44,10 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Blog');
             <div class="panel-body">
               <?=TaggingWidget::widget([
                   'items'=>$tags,
+                  'smallest'=>16,
+                  'largest'=>22,
+                  'unit'=>'px',
+                  'format'=>'cloud',
                   ]);
               ?>
             </div>
