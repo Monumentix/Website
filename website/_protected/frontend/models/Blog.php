@@ -12,9 +12,11 @@ use Yii;
  *
  * @property integer $id
  * @property integer $user_id
- * @property string $tags
  * @property string $title
+ * @property string $tags
  * @property string $slug
+ * @property string $filename
+ * @property string $blog_image
  * @property string $summary
  * @property string $content
  * @property integer $status
@@ -26,6 +28,7 @@ use Yii;
 class Blog extends ActiveRecord
 {
     public $postMonth;
+    public $image;
 
     const STATUS_DRAFT = 1;
     const STATUS_PUBLISHED = 2;
@@ -50,9 +53,11 @@ class Blog extends ActiveRecord
         return [
             [['user_id', 'title', 'tags', 'summary', 'slug', 'content', 'status'], 'required'],
             [['user_id', 'status'], 'integer'],
-            [['summary', 'content', 'tags'], 'string'],
+            [['summary', 'content','filename', 'tags'], 'string'],
             [['title'], 'string', 'max' => 255],
-            [['slug'], 'string', 'max' => 255]
+            [['slug'], 'string', 'max' => 255],
+            [['image'],'safe'],
+            [['image'],'file','extensions'=>'jpg, gif, png'],
         ];
     }
 

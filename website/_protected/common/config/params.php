@@ -48,6 +48,10 @@ return [
      */
     'supportEmail' => 'support@example.com',
 
+    /* USED BY icon module */
     'icon-framework' => 'fa',
+
+    /* fileUploadPath */
+    'uploadPath' => 'newFolder',
 
 ];

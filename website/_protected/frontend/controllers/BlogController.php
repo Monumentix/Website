@@ -3,6 +3,7 @@ namespace frontend\controllers;
 
 use frontend\models\Blog;
 use frontend\models\BlogSearch;
+use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use yii\web\MethodNotAllowedHttpException;
 use Yii;
@@ -63,10 +64,36 @@ class BlogController extends FrontendController
      */
     public function actionCreate()
     {
+      $model = new Blog();
+      $model->user_id = Yii::$app->user->id;
+
+      if($model->load(Yii::$app->request->post())){
+        $image = UploadedFile::getInstance($model,'image');
+        $model->filname = $image->name;
+        $ext = end((explode(".",$image->name)));
+
+        $model->blog_image = Yii::$app->security->generateRandomString().".{$ext}";
+
+        $path = Yii::$app->params['uploadPath'].$model->blog_image;
+
+        if($model->save()){
+          $image->saveAs($path);
+          return $this->redirect(['view', 'id' => $model->id]);
+        }else{
+          //error saving model, write an alert.
+        }
+
+      }else{
+
+        return $this->render('create', [
+          'model' => $model,
+          ]);
+          
+      }
+
+        /*
         $model = new Blog();
-
         $model->user_id = Yii::$app->user->id;
-
         if ($model->load(Yii::$app->request->post()) && $model->save())
         {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -77,6 +104,9 @@ class BlogController extends FrontendController
                 'model' => $model,
             ]);
         }
+        */
+
+
     }
 
     /**

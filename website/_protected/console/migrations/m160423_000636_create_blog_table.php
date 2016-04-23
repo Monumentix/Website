@@ -17,6 +17,8 @@ class m160423_000636_create_blog_table extends Migration
             'id' => $this->primaryKey(),
             'user_id' => $this->integer()->notNull(),
             'title' => $this->string()->notNull(),
+            'filename' => $this->string()->notNull(),
+            'blogImage' => $this->string()->notNull(),
             'slug' => $this->string()->notNull(),
             'summary' => $this->text()->notNull(),
             'content' => $this->text()->notNull(),
