@@ -12,6 +12,7 @@ use Yii;
  *
  * @property integer $id
  * @property integer $user_id
+ * @property string $tags
  * @property string $title
  * @property string $slug
  * @property string $summary
@@ -47,9 +48,9 @@ class Blog extends ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'title', 'summary', 'slug', 'content', 'status'], 'required'],
-            [['user_id', 'status'], 'integer'],
-            [['summary', 'content'], 'string'],
+            [['user_id', 'title', 'tags', 'summary', 'slug', 'content', 'status'], 'required'],
+            [['user_id', 'category_id','status'], 'integer'],
+            [['summary', 'content', 'tags'], 'string'],
             [['title'], 'string', 'max' => 255],
             [['slug'], 'string', 'max' => 255]
         ];
@@ -84,6 +85,7 @@ class Blog extends ActiveRecord
             'id' => Yii::t('app', 'ID'),
             'user_id' => Yii::t('app', 'Author'),
             'title' => Yii::t('app', 'Title'),
+            'tags' => Yii::t('app', 'Tags'),
             'summary' => Yii::t('app', 'Summary'),
             'content' => Yii::t('app', 'Content'),
             'status' => Yii::t('app', 'Status'),

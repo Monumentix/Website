@@ -8,7 +8,7 @@ use kartik\icons\Icon;
       Recent Posts
     </h3>
   </div>
-  <div class="panel-body">
+  <div class="panel-body text-left">
     <p>
       <?php foreach($model as $post) :  ?>
         <li class="recentTitles">

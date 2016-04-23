@@ -27,9 +27,9 @@ $this->title = Yii::t('app', Yii::$app->name);
           |
           <strong><?=Icon::show('code');?></strong> Programmer  <strong><?=Icon::show('code');?></strong>  </p>
         <p>
-          <a class="btn btn-lg btn-primary shadow" href="#aboutme"><?=Icon::show('user');?> Know me Better</a>
+          <a class="btn btn-lg btn-primary shadow" href="#about"><?=Icon::show('user');?> Know me Better</a>
           &nbsp; &nbsp;
-          <a class="btn btn-lg btn-success shadow" href="#contactme"><?=Icon::show('thumbs-up');?> Hire Me</a>
+          <a class="btn btn-lg btn-success shadow" href="#contact"><?=Icon::show('thumbs-up');?> Hire Me</a>
         </p>
         <div id="about"></div>
     </div>
@@ -72,7 +72,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                   <p>The term full-stack means developers who are comfortable working with both back-end and front-end technologies.</p>
                   <p>To be more specific, it means that the developer can work with databases, PHP, HTML, CSS, JavaScript and everything in between, also, venturing as far as converting Photoshop designs to front-end code.</p>
                   <p>A full-stack developer doesn’t need to master all of the areas and technologies he needs to work it, because that just makes it nearly impossible, he just needs to be comfortable working with those technologies, and that’s a lot too. </p>
-                  <footer>George Fekete - <cite title="Being A Full Stack Developer"><a href="http://www.sitepoint.com/full-stack-developer/">Being a Full Stack Developer</a></cite></footer>
+                  <footer>George Fekete - <cite title="Being A Full Stack Developer"><a target="_blank" href="http://www.sitepoint.com/full-stack-developer/">Being a Full Stack Developer</a></cite></footer>
                 </blockquote>
 
                 <P class="text-center">While this quote doesnt mention all the layers in many current cloud based technology stacks, but being comfortable with all the pieces that allow an application to run gives the devloper freedom to find an ideal solution for each unique challenge presented. <p>

@@ -31,6 +31,7 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/monumentix.css',
     ];
+
     public $js = [
     ];
 

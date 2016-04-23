@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use frontend\components\BlogPostWidget;
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Article */
@@ -77,38 +78,11 @@ $this->params['breadcrumbs'][] = $this->title;
               <p>973-671-8326</p>
           </div>
 
-          <div class="panel panel-monumentix">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                Archive
-              </h3>
-            </div>
-            <div class="panel-body">
-              <p>um ei ocurreret concludaturque. Vim ut vide etiam ignota, mea in ignota animal. Case utamur tibique at vel. Ei eum tota ornatus </p>
-            </div>
-            <div class="panel-footer">
-              <p class="text-center">Some simple footer data </p>
-            </div>
+          <?=BlogPostWidget::widget(['postCount'=>5,'action'=>'latestTitles']) ?>
+          <?=BlogPostWidget::widget(['postCount'=>5,'action'=>'archiveListing']) ?>
 
-          </div>
 
-          <div class="panel panel-monumentix">
-            <div class="panel-heading">
-              <h3 class="panel-title">
-                Categories
-              </h3>
-            </div>
-            <div class="panel-body">
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-              <li>Item 1</li>
-            </div>
-          </div>
 
-        </div>
 
       </div>
     </div>
