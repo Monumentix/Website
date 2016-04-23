@@ -74,12 +74,13 @@ class BlogController extends FrontendController
 
         if($model->validate()){
           // store the source file name
-            $strUniqueFilename = 'uploads/blog/'. Yii::$app->security->generateRandomString().".{$model->image->extension}";
 
-            $model->image->saveAs($strUniqueFilename);
-
-            $model->blog_image=$strUniqueFilename;
-
+            if($model->image != null ){
+              $strUniqueFilename = 'uploads/blog/'. Yii::$app->security->generateRandomString().".{$model->image->extension}";
+              $model->image->saveAs($strUniqueFilename);
+              $model->blog_image=$strUniqueFilename;
+            }
+            
             if($model->save()){
               return $this->redirect(['view', 'id' => $model->id]);
             }else{
@@ -139,7 +140,7 @@ class BlogController extends FrontendController
                   if($model->imageDelete == true){
                     $model->blog_image = NULL;
                   }elseif($model->image === NULL ){
-                    //Do nothing since we have a file already, but 
+                    //Do nothing since we have a file already, but
                   }else{
                     $strUniqueFilename = 'uploads/blog/'. Yii::$app->security->generateRandomString().".{$model->image->extension}";
                     $model->image->saveAs($strUniqueFilename);

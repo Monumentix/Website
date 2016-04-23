@@ -12,20 +12,19 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="article-form">
-
+  <div class="row">
     <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 
         <?= $form->field($model, 'title')->textInput(['maxlength' => 255]) ?>
 
         <?= $form->field($model, 'summary')->textarea(['rows' => 6]) ?>
 
-
+      </div>
         <div class="row">
 
-          <?php if($model->blog_image === null) : ?>
-              <?= $form->field($model, 'image')->fileInput(); ?>
-              <p class="text-center">No image selected...</p>
-          <?php else : ?>
+
+          <?php if(empty($model->blog_image) == false) : ?>
+
             <div class="col-sm-5 text-center">
               <?= $form->field($model, 'image')->fileInput(); ?>
               <p>To remove the existing image, choose this checkbox</p>
@@ -34,19 +33,22 @@ use yii\widgets\ActiveForm;
             <div class="col-sm-7">
               <img class="center-block img img-thumbnail img-blog-view" src="/<?=$model->blog_image?>">
             </div>
-          <?php endif ?>
+
+          <?php else: ?>
+            <?= $form->field($model, 'image')->fileInput(); ?>
+          <?php endif; ?>
 
 
 
         </div>
-
+        <div class="row"
 
 
         <?= $form->field($model, 'content')->widget(CKEditor::className(),
             ['editorOptions' => [ 'preset' => 'full', 'inline' => false]]); ?>
 
         <?= $form->field($model, 'tags')->textInput(['maxlength' => 255]) ?>
-
+      </div>
     <div class="row">
     <div class="col-lg-6">
 
@@ -57,14 +59,18 @@ use yii\widgets\ActiveForm;
     </div>
     </div>
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create')
-            : Yii::t('app', 'Update'), ['class' => $model->isNewRecord
-            ? 'btn btn-success' : 'btn btn-primary']) ?>
+    <div class="row">
+      <div class="form-group">
+          <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create')
+              : Yii::t('app', 'Update'), ['class' => $model->isNewRecord
+              ? 'btn btn-success' : 'btn btn-primary']) ?>
 
-        <?= Html::a(Yii::t('app', 'Cancel'), ['article/index'], ['class' => 'btn btn-default']) ?>
+          <?= Html::a(Yii::t('app', 'Cancel'), ['article/index'], ['class' => 'btn btn-default']) ?>
+      </div>
     </div>
 
-    <?php ActiveForm::end(); ?>
+    <div class="row">
+      <?php ActiveForm::end(); ?>
+    </div>
 
 </div>
