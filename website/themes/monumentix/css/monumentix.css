@@ -291,9 +291,10 @@ h1, h2, h3, h4, h5 { font-family: 'Fjalla One', sans-serif; }
 
 .blog-view{padding-top:20px;}
 .blog-devider{border-top-color: #356385;}
+
 .blog-view .blogTitle{font-size:140%;}
 .blog-view .blogAuthor{font-size:120%;}
-.blog-view .blogSummary{font-size:110%;}
+
 
 
 

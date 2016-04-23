@@ -8,7 +8,7 @@ use kartik\icons\Icon;
 
     <!-- LOWER third -->
     <div class="row">
-      <div class="col-lg-2 col-sm-6">
+      <div class="col-md-2 col-sm-6">
         <h4>Quick Links:</h4>
         <ul id="quicklinks">
           <li> <a href="/#aboutme"><?=Icon::show('info-circle')?>About Me</a></li>
@@ -18,15 +18,15 @@ use kartik\icons\Icon;
           <li> <a href="http://github.com/Monumentix" target="_blank"><?=Icon::show('github')?>GitHub</a></li>
         </ul>
       </div>
-      <div class="col-lg-2 col-sm-6">
+      <div class="col-md-2 col-sm-6">
         <h4>Demo My Work</h4>
         <p>Interact with a demo application.</p>
         <a class="btn btn-sm btn-warning btn-no-shadow btn-dark-text" href="#"><?=Icon::show('server');?> Demo & Samples</a>
       </div>
-      <div class="col-lg-6 col-sm-6">
+      <div class="col-md-6 col-sm-12">
         <?=BlogPostWidget::widget(['postCount'=>1]) ?>
       </div>
-      <div class="col-lg-2 col-sm-6">
+      <div class="col-md-2 col-sm-6">
         <h4>Get In Touch:</h4>
         <address>
           <strong>Monumentix / Brian Ridsdale </strong><br>
@@ -47,10 +47,10 @@ use kartik\icons\Icon;
 
     <!-- copywright -->
     <div class="row">
-      <div class="col-lg-6">
+      <div class="col-md-6">
         <p class="text-left">&copy; <?= Yii::t('app', Yii::$app->name) ?> <?= date('Y') ?></p>
       </div>
-      <div class="col-lg-6">
+      <div class="col-md-6">
         <p class="text-right"><?= Yii::powered() ?></p>
       </div>
     </div>

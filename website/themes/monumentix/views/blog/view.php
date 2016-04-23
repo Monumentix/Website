@@ -61,7 +61,9 @@ $this->params['breadcrumbs'][] = $this->title;
               <?= $model->content; ?>
           </div>
         </div>
-
+        <div class="row">
+          
+        </div>
 
 
 

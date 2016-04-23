@@ -4,7 +4,7 @@ use kartik\icons\Icon;
 use yii\helpers\StringHelper;
 ?>
 
-          <div class="col-lg-4">
+          <div class="col-sm-4">
             <div class="panel panel-default panel-blog">
               <div class="panel-heading">
                 <h3 class="panel-title"><a href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug]) ?>"><?= $model->title ?></a></h3>

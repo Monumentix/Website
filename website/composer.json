@@ -19,7 +19,7 @@
         "mihaildev/yii2-ckeditor": "*",
         "kartik-v/yii2-icons": "*",
         "justinvoelker/yii2-tagging": "*",
-        "kartik-v/yii2-widgets": "dev-master",
+        "kartik-v/yii2-widgets": "dev-master"        
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

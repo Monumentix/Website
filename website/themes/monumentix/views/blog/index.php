@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Blog');
     <hr class="top">
 
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-sm-9">
         <?= ListView::widget([
             'summary' => false,
             'dataProvider' => $dataProvider,
@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Blog');
             },
         ]) ?>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 col-sm-3">
           <?=BlogPostWidget::widget(['postCount'=>5,'action'=>'latestTitles']) ?>
           <?=BlogPostWidget::widget(['postCount'=>5,'action'=>'archiveListing']) ?>
 

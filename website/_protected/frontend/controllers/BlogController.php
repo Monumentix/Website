@@ -74,7 +74,7 @@ class BlogController extends FrontendController
 
         if($model->validate()){
           // store the source file name
-            $strUniqueFilename = 'uploads/'. Yii::$app->security->generateRandomString().".{$model->image->extension}";
+            $strUniqueFilename = 'uploads/blog/'. Yii::$app->security->generateRandomString().".{$model->image->extension}";
 
             $model->image->saveAs($strUniqueFilename);
 
