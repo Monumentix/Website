@@ -8,7 +8,8 @@
         "tutorial": "http://www.freetuts.org/tutorial/view?id=6",
         "source": "https://github.com/nenad-zivkovic/yii2-advanced-template"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
+    "prefer-stable":true,
     "require": {
         "php": ">=5.4.0",
         "yiisoft/yii2": "*",
@@ -17,8 +18,8 @@
         "nenad/yii2-password-strength": "*",
         "mihaildev/yii2-ckeditor": "*",
         "kartik-v/yii2-icons": "*",
-        "kartik-v/yii2-widget-fileinput": "@dev",
-        "justinvoelker/yii2-tagging": "*"
+        "justinvoelker/yii2-tagging": "*",
+        "kartik-v/yii2-widgets": "dev-master",
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

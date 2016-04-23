@@ -40,9 +40,32 @@ $this->params['breadcrumbs'][] = $this->title;
 
           </div>
         </h1>
-        <p>Author: <?=$model->authorName?> - <?= date('M j, Y',$model->created_at) ?> </p>
 
-        <?= $model->content; ?>
+        <div class="row">
+          <div class="col-sm-12 BlogAuthor">
+            <p>Author: <?=$model->authorName?> - <?= date('M j, Y',$model->created_at) ?> </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 blogSummary">
+            <p><?=$model->summary?> </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 text-center">
+              <img class="center-block img img-thumbnail img-blog-view " src="/<?=$model->blog_image ?> ">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 blogContent">
+              <?= $model->content; ?>
+          </div>
+        </div>
+
+
+
+
+
 
         <?php  /* =DetailView::widget([
             'model' => $model,

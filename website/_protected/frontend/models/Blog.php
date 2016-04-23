@@ -15,7 +15,6 @@ use Yii;
  * @property string $title
  * @property string $tags
  * @property string $slug
- * @property string $filename
  * @property string $blog_image
  * @property string $summary
  * @property string $content
@@ -53,11 +52,11 @@ class Blog extends ActiveRecord
         return [
             [['user_id', 'title', 'tags', 'summary', 'slug', 'content', 'status'], 'required'],
             [['user_id', 'status'], 'integer'],
-            [['summary', 'content','filename', 'tags'], 'string'],
+            [['summary', 'content','blog_image', 'tags'], 'string'],
             [['title'], 'string', 'max' => 255],
             [['slug'], 'string', 'max' => 255],
-            [['image'],'safe'],
-            [['image'],'file','extensions'=>'jpg, gif, png'],
+            [['image'],'file'],
+
         ];
     }
 

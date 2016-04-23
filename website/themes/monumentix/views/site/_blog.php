@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use kartik\icons\Icon;
+use yii\helpers\StringHelper;
 ?>
 
           <div class="col-lg-4">
@@ -9,7 +10,7 @@ use kartik\icons\Icon;
                 <h3 class="panel-title"><a href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug]) ?>"><?= $model->title ?></a></h3>
               </div>
               <div class="panel-body">
-                <p> <?= $model->summary ?></p>
+                <p> <?= StringHelper::truncate($model->summary,420,'...',null,true); ?></p>
                 <div class="text-right">
                   <a class="btn btn-xs btn-success shadow " href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug]) ?>">
 

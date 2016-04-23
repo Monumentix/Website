@@ -242,6 +242,10 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   color:#eee;
 }
 
+.footer .blogTitle {font-size:130%;}
+.img-blog-footer{max-width:90px; float:right; margin:0px 0px 0px 0px;}
+
+
 .footer hr{margin:10px 0px; border-color:#eee}
 
 #quicklinks {padding-left:0px;}
@@ -287,4 +291,10 @@ h1, h2, h3, h4, h5 { font-family: 'Fjalla One', sans-serif; }
 
 .blog-view{padding-top:20px;}
 .blog-devider{border-top-color: #356385;}
+.blog-view .blogTitle{font-size:140%;}
+.blog-view .blogAuthor{font-size:120%;}
+.blog-view .blogSummary{font-size:110%;}
+
+
+
 .recentTitles{}

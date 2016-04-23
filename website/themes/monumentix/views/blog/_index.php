@@ -15,7 +15,10 @@ $this->title = 'Blogs';
     <p class="time">
       <?=Icon::show('clock-o');?>   <?= Yii::t('app','Published on').' '.date('M j, Y', $model->created_at) ?> - <?=$model->getAuthorName(); ?> </p>
   </div>
-  <div class="col-sm-12">
+  <div class="col-sm-4">
+    <img class="center-block img img-thumbnail img-blog-preview " src="/<?=$model->blog_image ?> ">
+  </div>
+  <div class="col-sm-8">
     <p><?= $model->summary ?></p>
     <a class="btn btn-xs btn-success shadow " href="<?= Url::to(['blog/view', 'id' => $model->id, 'slug'=>$model->slug]) ?>">
 

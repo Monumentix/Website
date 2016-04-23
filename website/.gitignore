@@ -32,3 +32,5 @@ phpunit.phar
 
 /_protected/frontend/runtime
 /_protected/vendor/
+
+/uploads/

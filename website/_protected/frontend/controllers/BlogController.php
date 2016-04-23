@@ -8,6 +8,7 @@ use yii\web\NotFoundHttpException;
 use yii\web\MethodNotAllowedHttpException;
 use Yii;
 
+
 /**
  * BlogController implements the CRUD actions for Blog model.
  */
@@ -68,19 +69,24 @@ class BlogController extends FrontendController
       $model->user_id = Yii::$app->user->id;
 
       if($model->load(Yii::$app->request->post())){
-        $image = UploadedFile::getInstance($model,'image');
-        $model->filname = $image->name;
-        $ext = end((explode(".",$image->name)));
+        $model->image = UploadedFile::getInstance($model,'image');
 
-        $model->blog_image = Yii::$app->security->generateRandomString().".{$ext}";
 
-        $path = Yii::$app->params['uploadPath'].$model->blog_image;
+        if($model->validate()){
+          // store the source file name
+            $strUniqueFilename = 'uploads/'. Yii::$app->security->generateRandomString().".{$model->image->extension}";
 
-        if($model->save()){
-          $image->saveAs($path);
-          return $this->redirect(['view', 'id' => $model->id]);
-        }else{
-          //error saving model, write an alert.
+            $model->image->saveAs($strUniqueFilename);
+
+            $model->blog_image=$strUniqueFilename;
+
+            if($model->save()){
+              return $this->redirect(['view', 'id' => $model->id]);
+            }else{
+              //there was an error create some kind of alert, and
+              Yii::app()->user->setFlash('error',"There was an issue saving your blog, try again maybe?");
+              return $this->redirect(['index']);
+            }
         }
 
       }else{
@@ -88,7 +94,7 @@ class BlogController extends FrontendController
         return $this->render('create', [
           'model' => $model,
           ]);
-          
+
       }
 
         /*

@@ -4,7 +4,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 //use kartik\widgets\ActiveForm;
-use kartik\widgets\FileInput;
 
 
 /* @var $this yii\web\View */
@@ -14,21 +13,13 @@ use kartik\widgets\FileInput;
 
 <div class="article-form">
 
-    <?php $form = ActiveForm::begin([
-      'options'=>['enctype'=>'mulitpart/form-data'],
-      ]); ?>
+    <?php $form = ActiveForm::begin(['options'=>['enctype'=>'multipart/form-data']]); ?>
 
         <?= $form->field($model, 'title')->textInput(['maxlength' => 255]) ?>
 
         <?= $form->field($model, 'summary')->textarea(['rows' => 6]) ?>
 
-        <?= $form->field($model, 'filename')?>
-
-        <?= $form->field($model, 'image')->widget(FileInput::classname(), [
-            'options'=>['accept'=>'image/*'],
-            'pluginOptions'=>['allowedFileExtensions'=>['jpg','gif','png']]
-
-          ]);?>
+        <?= $form->field($model, 'image')->fileInput(); ?>
 
         <?= $form->field($model, 'content')->widget(CKEditor::className(),
             ['editorOptions' => [ 'preset' => 'full', 'inline' => false]]); ?>
