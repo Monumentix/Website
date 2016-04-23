@@ -28,6 +28,7 @@ class Blog extends ActiveRecord
 {
     public $postMonth;
     public $image;
+    public $imageDelete;
 
     const STATUS_DRAFT = 1;
     const STATUS_PUBLISHED = 2;
@@ -55,6 +56,7 @@ class Blog extends ActiveRecord
             [['summary', 'content','blog_image', 'tags'], 'string'],
             [['title'], 'string', 'max' => 255],
             [['slug'], 'string', 'max' => 255],
+            [['imageDelete'],'boolean'],
             [['image'],'file'],
 
         ];
@@ -93,6 +95,7 @@ class Blog extends ActiveRecord
             'summary' => Yii::t('app', 'Summary'),
             'content' => Yii::t('app', 'Content'),
             'status' => Yii::t('app', 'Status'),
+            'imageDelete' => Yii::t('app', 'Delete Image'),
             'created_at' => Yii::t('app', 'Created At'),
             'updated_at' => Yii::t('app', 'Updated At'),
         ];

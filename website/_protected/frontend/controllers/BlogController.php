@@ -130,10 +130,31 @@ class BlogController extends FrontendController
 
         if (Yii::$app->user->can('updateBlog', ['model' => $model]))
         {
-            if ($model->load(Yii::$app->request->post()) && $model->save())
-            {
-                return $this->redirect(['view', 'id' => $model->id]);
+
+            if($model->load(Yii::$app->request->post())){
+              $model->image = UploadedFile::getInstance($model,'image');
+
+              if($model->validate()){
+                // store the source file name
+                  if($model->imageDelete == true){
+                    $model->blog_image = NULL;
+                  }elseif($model->image === NULL ){
+                    //Do nothing since we have a file already, but 
+                  }else{
+                    $strUniqueFilename = 'uploads/blog/'. Yii::$app->security->generateRandomString().".{$model->image->extension}";
+                    $model->image->saveAs($strUniqueFilename);
+                    $model->blog_image=$strUniqueFilename;
+                  }
+                  if($model->save()){
+                    return $this->redirect(['view', 'id' => $model->id]);
+                  }else{
+                    //there was an error create some kind of alert, and
+                    Yii::app()->user->setFlash('error',"There was an issue saving your blog, try again maybe?");
+                    return $this->redirect(['index']);
+                  }
+              }
             }
+
             else
             {
                 return $this->render('update', [

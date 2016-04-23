@@ -19,7 +19,28 @@ use yii\widgets\ActiveForm;
 
         <?= $form->field($model, 'summary')->textarea(['rows' => 6]) ?>
 
-        <?= $form->field($model, 'image')->fileInput(); ?>
+
+        <div class="row">
+
+          <?php if($model->blog_image === null) : ?>
+              <?= $form->field($model, 'image')->fileInput(); ?>
+              <p class="text-center">No image selected...</p>
+          <?php else : ?>
+            <div class="col-sm-5 text-center">
+              <?= $form->field($model, 'image')->fileInput(); ?>
+              <p>To remove the existing image, choose this checkbox</p>
+              <?=$form->field($model, 'imageDelete')->checkbox();?>
+            </div>
+            <div class="col-sm-7">
+              <img class="center-block img img-thumbnail img-blog-view" src="/<?=$model->blog_image?>">
+            </div>
+          <?php endif ?>
+
+
+
+        </div>
+
+
 
         <?= $form->field($model, 'content')->widget(CKEditor::className(),
             ['editorOptions' => [ 'preset' => 'full', 'inline' => false]]); ?>

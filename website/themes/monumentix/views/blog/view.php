@@ -53,7 +53,12 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2 text-center">
+
+            <?php if($model->blog_image === NULL || $model->blog_image == '') : ?>
+              <?php //Do nothing since its empty ?>
+            <?php else : ?>
               <img class="center-block img img-thumbnail img-blog-view " src="/<?=$model->blog_image ?> ">
+            <?php endif; ?>
           </div>
         </div>
         <div class="row">
@@ -62,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
           </div>
         </div>
         <div class="row">
-          
+
         </div>
 
 
