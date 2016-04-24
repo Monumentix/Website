@@ -288,9 +288,11 @@ $this->title = Yii::t('app', Yii::$app->name);
 
   <div id="contactme" class="container-fluid ">
     <div class="container">
-      <div id="" class="row">
-        <h3 class="text-center">Contact Me</h3>
-        <div class="col-lg-8">
+      <div id="" class="row extra-padding">
+        <div clas="col-sm-12">
+          <h3 class="text-center">Contact Me</h3>
+        </div>
+        <div class="col-sm-8">
           <div id="" class="row bs-component well">
                 <p>
                     <?= Yii::t('app', 'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'); ?>
@@ -314,8 +316,8 @@ $this->title = Yii::t('app', Yii::$app->name);
           </div>
         </div>
 
-        <div class="col-lg-4 text-center ">
-        <img src="<?=$this->theme->baseUrl?>/images/coder.jpg" class="contact-image img-circle img-coder-logo-large img-responsive hidden-xs hidden-sm center-block" alt="">
+        <div class="col-sm-4 text-center ">
+        <img src="<?=$this->theme->baseUrl?>/images/coder.jpg" class="contact-image img-circle img-coder-logo-large img-responsive center-block" alt="">
         <Br>
           <div class="contact-info">
               <p>Brian Ridsdale</p>
