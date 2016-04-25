@@ -80,6 +80,8 @@ body{font-family: 'Roboto Condensed', sans-serif;}
   box-shadow:0px 0px 2px #000;
 }
 
+#aboutme .iamSoftware{font-size: 120%; padding:4px 0px;}
+
 #whatido{
   background-color:#356385;
   font-size:120%;

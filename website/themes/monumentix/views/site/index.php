@@ -43,8 +43,11 @@ $this->title = Yii::t('app', Yii::$app->name);
         <div class="col-sm-8">
             <h3><?=Icon::show('home');?>Monumentix / Brian Ridsdale</h3>
             <img class="pull-left img-circle img-responsive img-thumbnail img-coder-logo-small" src="<?=$this->theme->baseUrl?>/images/coder.jpg" style="width:120px;">
-            <p class="">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
-            <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,</p>
+            <p>I am a maker and do it yourself-er at my core.  As a programmer i do just that with code. I write software that does stuff.  I also maintain and manage the underlying infrastructure to run that software on the cloud.  </p>
+            <p>After starting my career working on CMS pages for our company site, i was given the chance to work on a large multi-tier Ticket Stock Management Application as Lead Developer.  As a Freelancer though i’ve had to fill many roles in building and deploying applications like a Scalable Cloud Based Ecommerce Solution for an Ecommerce Retailer.
+              I’ve also developed an Inventory Management and Tracking Application with a variety of internal modules for communicating with external 3rd Party Services.</p>
+            <p>I can take a software idea, design the needed business rules and make the data storage schema.  I can take a UI design and specification and make the software code.  I can launch the hardware resources that makes the software run. </p>
+            <p class="iamSoftware text-center"> I'm a Full Stack Developer and I make software happen.</p>
         </div>
 
         <div class="col-sm-4">
