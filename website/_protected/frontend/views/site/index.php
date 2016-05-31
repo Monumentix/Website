@@ -46,7 +46,7 @@ $this->title = Yii::t('app', Yii::$app->name);
             <ul>
               <li>2001 - Complete Schooling <p>Small text about school</p></li>
               <li>2002 - 2009 NJ Transit <p>Noteable projects include N-Tier Ticket Inventory Application</p></li>
-              <li>2009 - Freelance <p>Noteable projects include Searchlight Comics Cloud Based Infastructre</li>
+              <li>2009 - Freelance <p>Noteable projects include Searchlight Comics Cloud Based Infastructre</p></li>
             <ul>
             <p>Current personal / company goals for the foresable future things we are looking foward to, some sample bs random text</p>
         </div>

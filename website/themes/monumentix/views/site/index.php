@@ -53,11 +53,9 @@ $this->title = Yii::t('app', Yii::$app->name);
         <div class="col-sm-4">
             <h3><?=Icon::show('university');?>Experience</h3>
             <ul>
-              <li>2001 - Complete Schooling <p>Small text about school</p></li>
-              <li>2002 - 2009 NJ Transit <p>Noteable projects include N-Tier Ticket Inventory Application</p></li>
-              <li>2009 - Freelance <p>Noteable projects include Searchlight Comics Cloud Based Infastructre</li>
+              <li>2003-2011 : NJ Transit <p>ASP Intranet Site, Ticket Inventory Application using .NET/Oracle, Oracle Financal Application Package Support</p></li>
+              <li>2011-Present : Freelance <p>PHP Application Development to Automated and Streamline Buisness Processes using Yii Framework.  Multi Node Magento Installation and Configuration on Amazon AWS Web Services using Cloud Formation, ElastiCache, RDS, EC2, S3, and Code Deploy services. </li>
             <ul>
-            <p>Current personal / company goals for the foresable future things we are looking foward to, some sample bs random text</p>
         </div>
 
 
@@ -187,7 +185,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                     </div>
                     <div class="col-sm-8">
                       <h3>Cloud Based Scalable Infastructre</h3>
-                      <p>A scalable and cloud based option centered around Amazons AWS infastrucre was choosen in part to cost, as well as to the range of services that integrated well with our choosen ecommerce package.  The largest upside has been the ability to use GIT and Cloud Formation templates to deploy/manage our network stack from source code version controlled templates.
+                      <p>A scalable and cloud based option centered around Amazons AWS infastrucre was choosen in part to cost, as well as to the range of services that integrated well with our choosen ecommerce package.  A large upside has been the ability to use GIT and Cloud Formation templates to deploy/manage our network stack from source code version controlled templates.
                         <a class="pull-right" href="#">...learn more</a>
                       </p>
                     </div>
@@ -200,7 +198,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                     </div>
                     <div class="col-sm-8">
                       <h3>Open Source Ecommerce Package</h3>
-                      <p>When it came time to choose an ecommerce solution while cumbersome and bloated at times, magento does a good job at what it does.  That is provide an open source ecommerce solution with a large supporting community of developers and modules to enhacen and extend the platform.
+                      <p>When it came time to choose an ecommerce solution while big and bloated at times, magento does a good job at what it does.  That is provide an open source ecommerce solution with a large supporting community of developers and modules to enhance and extend the platform.
                         <a class="pull-right" href="#">...learn more</a>
                       </p>
                     </div>
@@ -247,7 +245,7 @@ $this->title = Yii::t('app', Yii::$app->name);
 
 
 
-
+<!--
   <div id="blogposts" class="container-fluid ">
     <div class="container">
       <div id="" class="row">
@@ -255,7 +253,7 @@ $this->title = Yii::t('app', Yii::$app->name);
           <h3 class="text-center">Blog Posts : <small class="lead">Project Updates and Information</small></h3>
           <div id="blogPostsRow" class="row center-block">
 
-            <?= ListView::widget([
+            <?/* = ListView::widget([
                 'summary' => false,
                 'dataProvider' => $blogDataProvider,
                 'emptyText' => Yii::t('app', 'We haven\'t created any Blogs yet.'),
@@ -265,9 +263,9 @@ $this->title = Yii::t('app', Yii::$app->name);
                     return $this->render('_blog', ['model' => $blogModel]);
                 },
               ])
-            ?>
+            */ ?>
 
-          </div> <!--End of row-->
+          </div>
 
           <div class="row">
 
@@ -275,18 +273,18 @@ $this->title = Yii::t('app', Yii::$app->name);
             Read more about our projects and technologies were are working with or have worked with.
             <a class="text-right btn btn btn-primary shadow" href="#">
 
-              <?= yii::t('app','My Blog'); ?>
+              <?php /* = yii::t('app','My Blog'); */ ?>
               &nbsp;
-              <?=Icon::show('arrow-circle-right');?>
+              <?php /* = Icon::show('arrow-circle-right'); */?>
               </a>
           </h5>
-          </div> <!--End of row-->
+          </div>
           <div id="contact"></div>
         </div>
       </div>
     </div>
   </div>
-
+-->
 
 
   <div id="contactme" class="container-fluid ">
