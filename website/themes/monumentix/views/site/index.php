@@ -186,7 +186,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                     <div class="col-sm-8">
                       <h3>Cloud Based Scalable Infastructre</h3>
                       <p>A scalable and cloud based option centered around Amazons AWS infastrucre was choosen in part to cost, as well as to the range of services that integrated well with our choosen ecommerce package.  A large upside has been the ability to use GIT and Cloud Formation templates to deploy/manage our network stack from source code version controlled templates.
-                        <a class="pull-right" href="#">...learn more</a>
+                        <a class="pull-right" href="/blog/1/spotlight-project-scalable-cloud-based-e-commerce-solution">...learn more</a>
                       </p>
                     </div>
                   </div>
@@ -199,7 +199,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                     <div class="col-sm-8">
                       <h3>Open Source Ecommerce Package</h3>
                       <p>When it came time to choose an ecommerce solution while big and bloated at times, magento does a good job at what it does.  That is provide an open source ecommerce solution with a large supporting community of developers and modules to enhance and extend the platform.
-                        <a class="pull-right" href="#">...learn more</a>
+                        <a class="pull-right" href="/blog/1/spotlight-project-scalable-cloud-based-e-commerce-solution">...learn more</a>
                       </p>
                     </div>
                   </div>
@@ -212,7 +212,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                     <div class="col-sm-8">
                       <h3>Product Management Application</h3>
                       <p>Custom Web Based Buisness Application to  streamline and automate day to day processes that were not feasible or suitable to existing sub-systems.  Initially this Application started life as an data entry for inventory, as well as inventory tracking applcation, but quickly expanded to fill many other roles.
-                        <a class="pull-right" href="#">...learn more</a>
+                        <a class="pull-right" href="/blog/1/spotlight-project-scalable-cloud-based-e-commerce-solution">...learn more</a>
                       </p>
                     </div>
                   </div>
@@ -227,15 +227,17 @@ $this->title = Yii::t('app', Yii::$app->name);
               <br>
 
               <div class="row">
-                <div class="col-sm-4 text-center">
-                  <a class="btn btn-lg btn-success shadow" href="#"><span class="glyphicon glyphicon-certificate"></span> Learn how it all works</a>
+                <div class="col-sm-6 text-center">
+                  <a class="btn btn-lg btn-success shadow" href="/blog/1/spotlight-project-scalable-cloud-based-e-commerce-solution"><span class="glyphicon glyphicon-certificate"></span> See more in-depth</a>
                 </div>
-                <div class="col-sm-4 text-center">
-                  <a class="btn btn-lg btn-primary shadow" href="#"><span class="glyphicon glyphicon-link"></span> See the storefront</a>
+                <div class="col-sm-6 text-center">
+                  <a class="btn btn-lg btn-primary shadow" href="http://searchlightcomics.com" target="_blank"><span class="glyphicon glyphicon-link"></span> See the storefront</a>
                 </div>
+                <!--
                 <div class="col-sm-4 text-center">
-                  <a class="btn btn-lg btn-warning shadow" href="#"><span class="glyphicon glyphicon-exclamation-sign"></span> Play with some modules</a>
+                  <a class="btn btn-lg btn-warning shadow" href="/blog/1/spotlight-project-scalable-cloud-based-e-commerce-solution"><span class="glyphicon glyphicon-exclamation-sign"></span> Play with some modules</a>
                 </div>
+                -->
 
               </div>
           </div>
