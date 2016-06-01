@@ -242,6 +242,7 @@ $this->title = Yii::t('app', Yii::$app->name);
               </div>
           </div>
       </div>
+      <div id="contact"></div>
     </div>
   </div>
 
