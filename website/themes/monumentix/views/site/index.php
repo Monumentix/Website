@@ -29,7 +29,7 @@ $this->title = Yii::t('app', Yii::$app->name);
         <p>
           <a class="btn btn-lg btn-primary shadow" href="#about"><?=Icon::show('user');?> Know me Better</a>
           &nbsp; &nbsp;
-          <a class="btn btn-lg btn-success shadow" href="#contact"><?=Icon::show('thumbs-up');?> Hire Me</a>
+          <a class="btn btn-lg btn-success shadow" href="#contact"><?=Icon::show('thumbs-up');?> Contact Me</a>
         </p>
         <div id="about"></div>
     </div>
@@ -43,18 +43,30 @@ $this->title = Yii::t('app', Yii::$app->name);
         <div class="col-sm-8">
             <h3><?=Icon::show('home');?>Monumentix / Brian Ridsdale</h3>
             <img class="pull-left img-circle img-responsive img-thumbnail img-coder-logo-small" src="<?=$this->theme->baseUrl?>/images/coder.jpg" style="width:120px;">
-            <p>I am a maker and do it yourself-er at my core.  As a programmer i do just that with code. I write software that does stuff.  I also maintain and manage the underlying infrastructure to run that software on the cloud.  </p>
-            <p>After starting my career working on CMS pages for our company site, i was given the chance to work on a large multi-tier Ticket Stock Management Application as Lead Developer.  As a Freelancer though i’ve had to fill many roles in building and deploying applications like a Scalable Cloud Based Ecommerce Solution for an Ecommerce Retailer.
-              I’ve also developed an Inventory Management and Tracking Application with a variety of internal modules for communicating with external 3rd Party Services.</p>
-            <p>I can take a software idea, design the needed business rules and make the data storage schema.  I can take a UI design and specification and make the software code.  I can launch the hardware resources that makes the software run. </p>
+            <p>I am a maker and do-it-yourself-er at my core. As a programmer I do just that – but with code. I write software that does “stuff” you need for your business. I also maintain and manage the underlying infrastructure to run that software on the cloud.  </p>
+            <p>After starting my career working on Content Management System pages for our company site, I was given the chance to work as Lead Developer on a Ticket Stock Management Application. As a Freelancer i’ve had to fill a variety of roles in building and deploying applications such as a Scalable Cloud Based E-commerce Retail Solution. I’ve also developed an Inventory Management and Tracking Application with a variety of internal modules for communicating with external 3rd Party Services.</p>
+            <p>I can take a software idea, design the needed business rules and develop the data storage schema. I can take a UI design and specification and build the software code. I can launch the hardware resources that make the software run. </p>
             <p class="iamSoftware text-center"> I'm a Full Stack Developer and I make software happen.</p>
         </div>
 
         <div class="col-sm-4">
             <h3><?=Icon::show('university');?>Experience</h3>
             <ul>
-              <li>2003-2011 : NJ Transit <p>ASP Intranet Site, Ticket Inventory Application using .NET/Oracle, Oracle Financal Application Package Support</p></li>
-              <li>2011-Present : Freelance <p>PHP Application Development to Automated and Streamline Buisness Processes using Yii Framework.  Multi Node Magento Installation and Configuration on Amazon AWS Web Services using Cloud Formation, ElastiCache, RDS, EC2, S3, and Code Deploy services. </li>
+              <li>2003-2011 : NJ Transit
+                <ul>
+                  <li>ASP Intranet Site</li>
+                  <li>Ticket Stock Management Application using vb.NET and Oracle</li>
+                  <li>Oracle Financal Application Package Support</li>
+                </ul>
+              </li>
+              <li>2011-Present : Freelance Developer
+                <ul>
+                  <li>PHP Application Development to Automated and Streamline Buisness Processes using Yii Framework</li>
+                  <li>Scalable Configuration & Deployment on Amazon Web Services</li>
+                  <li>Set up small buisness websites using open source Content Mangement Systems</li>
+                  <li>Design and implement external data acquistion & management solutions</li>
+                </ul>
+              </li>
             <ul>
         </div>
 
@@ -83,23 +95,22 @@ $this->title = Yii::t('app', Yii::$app->name);
             <div class="col-sm-6">
               <img src="">
               <h3><?=Icon::show('server');?> Server / Networking / Hosting Enviroment</h3>
-              <p>Wanna launch a website?  No problem. Wait it needs auto scaling frontend servers seperated from your backend application servers.  No problem.  More you say, a seperate database cluster and reddis caching as well.
-                And you need notification of all this stuff sent to your phone. Sure i can do that.</p>
+                <p>So you want to launch a website? Will it need auto scaling frontend servers separated from your backend application servers?  Will it also need separate database and caching services?  Will you also want notification of all this “stuff” sent to your phone? I can make that happen.</p>
             </div>
             <div class="col-sm-6">
               <img src="">
               <h3><?=Icon::show('database');?> Data Modeling and Business Logic</h3>
-              <p>If you dont measure it, you cant manage it.  With so much available data in our applications and outside systems it can get frusturating keeping track of it all.  I can help you manage all that data through implementation of buisness logic and rules alongside normalized relational data models, viewable through queryable web forms and reports. </p>
+              <p>If you don’t measure it - you can’t manage it. The flood of data from our applications and outside systems is frustrating. I can help manage that data through implementation of business logic and rules in relational data models, viewable through web queries and reports.</p>
             </div>
             <div class="col-sm-6">
               <img src="">
               <h3><?=Icon::show('desktop');?> User Interface / User Experience</h3>
-              <p>From readable layouts, to meaningful error messages, to minamizing button clicks and application steps, i strive to ensure the final product always remains as easy as it can be for the application user. </p>
+              <p>Quality Front End Layouts are readable, and provide meaningful error messages while minimizing Button Clicks and application steps. I strive to ensure the final product always remains as easy as it can be for the application user.</p>
             </div>
             <div class="col-sm-6">
               <img src="">
-              <h3><?=Icon::show('code');?> AND i write code too!</h3>
-              <p>While i write code, just as big a part is reading code.  Understanding external API's and MVC frameworks along with the affect they have on core business logic and its data has also become critical in our digital world. </p>
+              <h3><?=Icon::show('code');?> I write AND read code too</h3>
+              <p>A goal of my work is to deliver well-structured, documented code that can be understood by others.  Frequently, it is necessary to use API’s and frameworks from external sources. Properly understanding these elements is essential to effective integration to core business logic with minimized impacts.</p>
             </div>
         </div>
 
