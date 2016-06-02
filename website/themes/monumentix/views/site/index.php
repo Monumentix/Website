@@ -56,15 +56,15 @@ $this->title = Yii::t('app', Yii::$app->name);
                 <ul>
                   <li>ASP Intranet Site</li>
                   <li>Ticket Stock Management Application using vb.NET and Oracle</li>
-                  <li>Oracle Financal Application Package Support</li>
+                  <li>Oracle Financial Application Package Support</li>
                 </ul>
               </li>
               <li>2011-Present : Freelance Developer
                 <ul>
-                  <li>PHP Application Development to Automated and Streamline Buisness Processes using Yii Framework</li>
+                  <li>PHP Application Development to Automated and Streamline Business Processes using Yii Framework</li>
                   <li>Scalable Configuration & Deployment on Amazon Web Services</li>
-                  <li>Set up small buisness websites using open source Content Mangement Systems</li>
-                  <li>Design and implement external data acquistion & management solutions</li>
+                  <li>Set up small business websites using open source Content Management Systems</li>
+                  <li>Design and implement external data acquisition & management solutions</li>
                 </ul>
               </li>
             <ul>
@@ -94,7 +94,7 @@ $this->title = Yii::t('app', Yii::$app->name);
             <hr>
             <div class="col-sm-6">
               <img src="">
-              <h3><?=Icon::show('server');?> Server / Networking / Hosting Enviroment</h3>
+              <h3><?=Icon::show('server');?> Server / Networking / Hosting Environment</h3>
                 <p>So you want to launch a website? Will it need auto scaling frontend servers separated from your backend application servers?  Will it also need separate database and caching services?  Will you also want notification of all this “stuff” sent to your phone? I can make that happen.</p>
             </div>
             <div class="col-sm-6">
@@ -195,8 +195,8 @@ $this->title = Yii::t('app', Yii::$app->name);
                       <?=Icon::show('cloud',['class'=>'fa-5x']);?>
                     </div>
                     <div class="col-sm-8">
-                      <h3>Cloud Based Scalable Infastructre</h3>
-                      <p>A scalable and cloud based option centered around Amazons AWS infastrucre was choosen in part to cost, as well as to the range of services that integrated well with our choosen ecommerce package.  A large upside has been the ability to use GIT and Cloud Formation templates to deploy/manage our network stack from source code version controlled templates.
+                      <h3>Cloud Based Scalable Infrastructure</h3>
+                      <p>A scalable and cloud based option centered around Amazons AWS infrastructure was chosen in part to cost, as well as to the range of services that integrated well with our chosen ecommerce package.  A large upside has been the ability to use GIT and Cloud Formation templates to deploy/manage our network stack from source code version controlled templates.
                         <a class="pull-right" href="/blog/1/spotlight-project-scalable-cloud-based-e-commerce-solution">...learn more</a>
                       </p>
                     </div>
@@ -209,7 +209,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                     </div>
                     <div class="col-sm-8">
                       <h3>Open Source Ecommerce Package</h3>
-                      <p>When it came time to choose an ecommerce solution while big and bloated at times, magento does a good job at what it does.  That is provide an open source ecommerce solution with a large supporting community of developers and modules to enhance and extend the platform.
+                      <p>When it came time to choose an ecommerce solution while big and bloated at times, Magento does a good job at what it does.  That is provide an open source ecommerce solution with a large supporting community of developers and modules to enhance and extend the platform.
                         <a class="pull-right" href="/blog/1/spotlight-project-scalable-cloud-based-e-commerce-solution">...learn more</a>
                       </p>
                     </div>
@@ -222,7 +222,7 @@ $this->title = Yii::t('app', Yii::$app->name);
                     </div>
                     <div class="col-sm-8">
                       <h3>Product Management Application</h3>
-                      <p>Custom Web Based Buisness Application to  streamline and automate day to day processes that were not feasible or suitable to existing sub-systems.  Initially this Application started life as an data entry for inventory, as well as inventory tracking applcation, but quickly expanded to fill many other roles.
+                      <p>Custom Web Based Business Application to streamline and automate day to day processes that were not feasible or suitable to existing sub-systems.  Initially this Application started life as a data entry for inventory, as well as inventory tracking application, but quickly expanded to fill many other roles.
                         <a class="pull-right" href="/blog/1/spotlight-project-scalable-cloud-based-e-commerce-solution">...learn more</a>
                       </p>
                     </div>
